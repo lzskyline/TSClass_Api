@@ -37,7 +37,7 @@
 > 参数 | 类型 | 说明
 > ---|----|---
 > data | int | 用户id
-> info | string|unicode | 提示信息
+> info | string | 提示信息(unicode)
 > status | int | 状态代码,0:失败,1:成功
 
 ###### 接口示例
@@ -81,7 +81,7 @@
 > 参数 | 类型 | 说明
 > ---|----|---
 > data | int | 用户id
-> info | string|unicode | 提示信息
+> info | string | 提示信息(unicode)
 > status | int | 状态代码,0:失败,1:成功
 
 ###### 接口示例
