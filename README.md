@@ -37,4 +37,15 @@
 > ---|----|---
 > data | strInt | 用户id
 > info | string | 提示信息
-> status | int 状态代码,0:失败,1:成功
+> status | int | 状态代码,0:失败,1:成功
+
+###### 接口示例
+
+> 地址：> [/student.php/Index/login]()
+> 
+> 参数： user=test& pass=123456
+
+
+``` javascript
+{"data":"1","info":"\u767b\u9646\u6210\u529f!","status":1}
+```
