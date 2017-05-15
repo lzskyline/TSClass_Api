@@ -1,10 +1,12 @@
 <?php
 class IndexAction extends Action {
     public function login(){
-        $u = $_SESSION["user"];
-        if($u)return $u;
         $u = I('post.user');
-        if(!$u)$this->ajaxReturn(0,"登录信息无效,请重新登录!",0);
+        if(!$u){
+            $u = $_SESSION["user"];
+            if($u)return $u;
+            $this->ajaxReturn(0,"登录信息无效,请重新登录!",0);
+        }
         $p = md5(I('post.pass'));
         $ret = M('student')->where('username="%s" and password="%s"',$u,$p)->getField('id');
         if(!$ret)$this->ajaxReturn(0,"用户名或密码错误!",0);
@@ -17,12 +19,13 @@ class IndexAction extends Action {
     }
     public function register(){
         $u = I('post.user');
-        $p = md5(I('post.pass'));
+        $p = I('post.pass');
+        if(!($u&&$p))$this->ajaxReturn(0,"用户名或密码不能为空!",0);
+        $p = md5($p);
         $ret = M('student')->add(array('username'=>"$u",'password'=>"$p"));
-        if($ret)$this->ajaxReturn(0,"用户名已存在,请尝试找回密码!",0);
+        if(!$ret)$this->ajaxReturn(0,"用户名已存在,请尝试找回密码!",0);
+        $_SESSION["user"] = (int)$ret;
         $this->ajaxReturn((int)$ret,"注册成功!",1);
-        
-        //$_SESSION["user"] = (int)$ret; //注册后是否自动登陆
     }
     public function addCourse(){
         $id = $this->login();
@@ -74,5 +77,11 @@ class IndexAction extends Action {
         ->order('datetime desc')->limit(0,20)->select();
         if($ret)$this->ajaxReturn($ret,"读取成功!",1);
         $this->ajaxReturn(null,"暂无相关内容!",0);
+    }
+    public function debug(){
+        echo "get\r\n";
+        var_dump(I('get.'));
+        echo "post\r\n";
+        var_dump(I('post.'));
     }
 }

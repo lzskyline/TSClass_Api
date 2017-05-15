@@ -10,10 +10,29 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2017-05-14 23:47:44
+Date: 2017-05-15 22:03:43
 */
 
 SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for `tsc_answered`
+-- ----------------------------
+DROP TABLE IF EXISTS `tsc_answered`;
+CREATE TABLE `tsc_answered` (
+  `id` int(6) NOT NULL AUTO_INCREMENT,
+  `question` varchar(255) NOT NULL,
+  `sid` int(6) NOT NULL,
+  `answer` varchar(255) DEFAULT NULL,
+  `cid` int(6) NOT NULL,
+  `updatetime` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of tsc_answered
+-- ----------------------------
+INSERT INTO `tsc_answered` VALUES ('1', 'wenti', '1', 'daan', '1', '2017-05-15 14:44:37');
 
 -- ----------------------------
 -- Table structure for `tsc_course`
@@ -26,13 +45,32 @@ CREATE TABLE `tsc_course` (
   `tid` int(6) NOT NULL,
   `description` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
   `image` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `unique course` (`title`,`tid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of tsc_course
 -- ----------------------------
 INSERT INTO `tsc_course` VALUES ('1', 'JAVA课程设计', '0', '1', '描述描述,不可描述', '1.jpg');
+
+-- ----------------------------
+-- Table structure for `tsc_notice`
+-- ----------------------------
+DROP TABLE IF EXISTS `tsc_notice`;
+CREATE TABLE `tsc_notice` (
+  `id` int(6) NOT NULL AUTO_INCREMENT,
+  `cid` int(6) NOT NULL,
+  `content` varchar(50) NOT NULL,
+  `sid` int(6) NOT NULL DEFAULT '0',
+  `datetime` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of tsc_notice
+-- ----------------------------
+INSERT INTO `tsc_notice` VALUES ('1', '1', '全部同学 通知通知!', '0', '2017-05-15 15:22:58');
 
 -- ----------------------------
 -- Table structure for `tsc_selected`
@@ -42,14 +80,15 @@ CREATE TABLE `tsc_selected` (
   `id` int(6) NOT NULL AUTO_INCREMENT,
   `cid` int(6) NOT NULL,
   `sid` int(6) NOT NULL,
-  `datetime` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+  `datetime` datetime NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `unique selected` (`cid`,`sid`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of tsc_selected
 -- ----------------------------
-INSERT INTO `tsc_selected` VALUES ('1', '1', '1', null);
+INSERT INTO `tsc_selected` VALUES ('1', '1', '1', '2017-05-15 14:20:35');
 
 -- ----------------------------
 -- Table structure for `tsc_student`
@@ -59,7 +98,8 @@ CREATE TABLE `tsc_student` (
   `id` int(6) NOT NULL AUTO_INCREMENT,
   `username` varchar(15) CHARACTER SET utf8 NOT NULL,
   `password` varchar(32) CHARACTER SET utf8 NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `unique name` (`username`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
@@ -76,8 +116,9 @@ CREATE TABLE `tsc_teacher` (
   `id` int(6) NOT NULL AUTO_INCREMENT,
   `username` varchar(15) CHARACTER SET utf8 NOT NULL,
   `password` varchar(32) CHARACTER SET utf8 NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `unique name` (`username`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of tsc_teacher
