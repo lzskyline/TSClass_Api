@@ -91,6 +91,8 @@ class IndexAction extends Action {
                 "nodes"=>$this->getChapter($courseId,$i["id"])
                 );
             */
+            //<script src="__PUBLIC__/js/bootstrap-treeview.js"></script>
+            //<div id="tree"></div>
             $tmp[] = array(
                 "title" => "$i[title]",
                 "nodes" => $this->getChapter($courseId,$i["id"])
