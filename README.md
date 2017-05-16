@@ -6,9 +6,14 @@
 2.  <a href="#register">注册</a>
 3.  <a href="#addCourse">添加课程</a>
 4.  <a href="#getCourseList">获取课程列表</a>
-5.  <a href="#getAnsweredList">获取问答列表>/a>
-6.  <a href="#getNoticeList">获取消息列表>/a>
-7.  <a href="#getChapterList">获取章节列表>/a>
+5.  <a href="#getAnsweredList">获取问答列表</a>
+6.  <a href="#getNoticeList">获取消息列表</a>
+7.  <a href="#getChapterList">获取章节列表</a>
+8.  <a href="#getCourseware">获取小节课件</a>
+9.  <a href="#getHomework">获取小节作业</a>
+10.  <a href="#getPunchList">获取签到记录</a>
+11.  <a href="#punchCard">打卡签到</a>
+12.  <a href="#postQuestion">提交问题</a>
 
 ***
 
@@ -169,12 +174,12 @@
 
 > 参数 | 类型 | 说明
 > ---|----|---
-> data | Array | 课程列表
+> data | Array | 列表数组
 > id | data->string | 课程id
 > title | data->string | 课程名
 > description | data->string | 课程介绍
-> image | data->string | 教师姓名
-> username | data->string | 课程封面图url
+> image | data->string | 课程封面图url(存放路径为:基础地址/images/)
+> username | data->string | 教师姓名
 > info | string | 提示信息(unicode)
 > status | int | 状态代码,0:失败,1:成功
 
@@ -186,7 +191,19 @@
 
 
 ``` javascript
-{"data":[{"id":"1","title":"JAVA课程设计","description":"描述描述,不可描述","image":"1.jpg","username":"teacher"}],"info":"课程列表","status":1}
+{
+  "data": [
+    {
+      "id": "1",
+      "title": "JAVA课程设计",
+      "description": "描述描述,不可描述",
+      "image": "1.jpg",
+      "teacher": "teacher"
+    }
+  ],
+  "info": "读取成功!",
+  "status": 1
+}
 ```
 
 **5.<span id="getAnsweredList">获取问答列表</span>**
@@ -220,7 +237,7 @@
 
 > 参数 | 类型 | 说明
 > ---|----|---
-> data | Array | 课程列表
+> data | Array | 列表数组
 > id | data->string | 问题id
 > question | data->string | 问题标题
 > answer | data->string | 问题答复
@@ -239,7 +256,30 @@
 
 
 ``` javascript
-{"data":[{"id":"1","question":"wenti","answer":"daan","title":"JAVA课程设计","username":"teacher"}],"info":"读取成功!","status":1}
+{
+  "data": [
+    {
+      "id": "2",
+      "question": "问题问题",
+      "answer": "",
+      "title": "JAVA课程设计",
+      "cid": "1",
+      "teacher": "teacher",
+      "student": "student"
+    },
+    {
+      "id": "1",
+      "question": "wenti",
+      "answer": "daan",
+      "title": "JAVA课程设计",
+      "cid": "1",
+      "teacher": "teacher",
+      "student": "test"
+    }
+  ],
+  "info": "读取成功!",
+  "status": 1
+}
 ```
 
 **6.<span id="getNoticeList">获取消息列表</span>**
@@ -268,7 +308,7 @@
 
 > 参数 | 类型 | 说明
 > ---|----|---
-> data | Array | 课程列表
+> data | Array | 列表数组
 > id | data->string | 消息id
 > cid | data->string | 课程id
 > title | data->string | 课程名称
@@ -286,7 +326,20 @@
 
 
 ``` javascript
-{"data":[{"id":"1","cid":"1","title":"JAVA课程设计","content":"通知通知!","teacher":"teacher","datetime":"2017-05-15 15:22:58"}],"info":"读取成功!","status":1}
+{
+  "data": [
+    {
+      "id": "1",
+      "cid": "1",
+      "title": "JAVA课程设计",
+      "content": "全部同学 通知通知!",
+      "teacher": "teacher",
+      "datetime": "2017-05-15 15:22:58"
+    }
+  ],
+  "info": "读取成功!",
+  "status": 1
+}
 ```
 
 **7.<span id="getChapterList">获取章节列表</span>**
@@ -317,7 +370,7 @@
 
 > 参数 | 类型 | 说明
 > ---|----|---
-> data | Array | 课程列表
+> data | Array | 列表数组
 > title | data->string | 章名称
 > nodes | data->Array | 节点数组(递归数组,格式与data相同)
 > info | string | 提示信息(unicode)
@@ -369,6 +422,287 @@
     }
   ],
   "info": "读取成功!",
+  "status": 1
+}
+```
+
+**8.<span id="getCourseware">获取小节课件</span>**
+
+###### 接口功能
+
+> 获取某一小节的课件地址
+
+###### URL
+
+> [/student.php/Index/getCourseware]()
+
+###### 返回格式
+
+> JSON
+
+###### HTTP请求方式
+
+> POST
+
+###### 请求参数
+
+> 参数 | 必选 | 类型 | 说明
+> ---|----|----|---
+> pid | 是 | int | 指定小节id
+
+###### 返回字段
+
+> 参数 | 类型 | 说明
+> ---|----|---
+> data | Array | 列表数组
+> id | data->string | 课件id
+> title | data->string | 课件标题
+> url | data->string | 课件地址
+> pid | data->string | 小节id
+> info | string | 提示信息(unicode)
+> status | int | 状态代码,0:失败,1:成功
+
+###### 接口示例
+
+> 地址：> [/student.php/Index/getCourseware]()
+> 
+> 参数： pid=6
+
+
+``` javascript
+{
+  "data": [
+    {
+      "id": "1",
+      "title": "序章课件",
+      "url": "http://baidu.com/",
+      "pid": "6"
+    }
+  ],
+  "info": "读取成功!",
+  "status": 1
+}
+```
+
+**9.<span id="getHomework">获取小节作业</span>**
+
+###### 接口功能
+
+> 获取某一小节的作业列表
+
+###### URL
+
+> [/student.php/Index/getHomework]()
+
+###### 返回格式
+
+> JSON
+
+###### HTTP请求方式
+
+> POST
+
+###### 请求参数
+
+> 参数 | 必选 | 类型 | 说明
+> ---|----|----|---
+> pid | 是 | int | 指定小节id
+
+###### 返回字段
+
+> 参数 | 类型 | 说明
+> ---|----|---
+> data | Array | 列表数组
+> id | data->string | 作业id
+> question | data->string | 问题集合(使用换行分割)
+> answer | data->string | 正确答案(0为第1行)
+> pid | data->string | 小节id
+> info | string | 提示信息(unicode)
+> status | int | 状态代码,0:失败,1:成功
+
+###### 接口示例
+
+> 地址：> [/student.php/Index/getHomework]()
+> 
+> 参数： pid=6
+
+
+``` javascript
+{
+  "data": [
+    {
+      "id": "1",
+      "question": "问题1\r\n问题2\r\n问题3\r\n问题4",
+      "answer": "0",
+      "pid": "6"
+    }
+  ],
+  "info": "读取成功!",
+  "status": 1
+}
+```
+
+**10.<span id="getPunchList">获取签到记录</span>**
+
+###### 接口功能
+
+> 获取某一课程的签到记录(时间倒序)
+
+###### URL
+
+> [/student.php/Index/getPunchList]()
+
+###### 返回格式
+
+> JSON
+
+###### HTTP请求方式
+
+> POST
+
+###### 请求参数
+
+> 参数 | 必选 | 类型 | 说明
+> ---|----|----|---
+> cid | 是 | int | 指定课程id
+
+###### 返回字段
+
+> 参数 | 类型 | 说明
+> ---|----|---
+> data | Array | 列表数组
+> id | data->string | 签到id
+> sid | data->string | 学生id
+> cid | data->string | 课程id
+> datetime | data->string | 签到时间
+> info | string | 提示信息(unicode)
+> status | int | 状态代码,0:失败,1:成功
+
+###### 接口示例
+
+> 地址：> [/student.php/Index/getPunchList]()
+> 
+> 参数： cid=1
+
+
+``` javascript
+{
+  "data": [
+    {
+      "id": "3",
+      "sid": "2",
+      "cid": "1",
+      "datetime": "2017-05-16 17:09:38"
+    },
+    {
+      "id": "2",
+      "sid": "2",
+      "cid": "1",
+      "datetime": "2017-05-15 16:33:39"
+    },
+    {
+      "id": "1",
+      "sid": "2",
+      "cid": "1",
+      "datetime": "2017-05-14 14:20:12"
+    }
+  ],
+  "info": "读取成功!",
+  "status": 1
+}
+```
+
+**11.<span id="punchCard">打卡签到</span>**
+
+###### 接口功能
+
+> 在课程允许签到时提交签到记录
+
+###### URL
+
+> [/student.php/Index/punchCard]()
+
+###### 返回格式
+
+> JSON
+
+###### HTTP请求方式
+
+> POST
+
+###### 请求参数
+
+> 参数 | 必选 | 类型 | 说明
+> ---|----|----|---
+> cid | 是 | int | 指定课程id
+
+###### 返回字段
+
+> 参数 | 类型 | 说明
+> ---|----|---
+> data | int | 签到id
+> info | string | 提示信息(unicode)
+> status | int | 状态代码,0:失败,1:成功
+
+###### 接口示例
+
+> 地址：> [/student.php/Index/punchCard]()
+> 
+> 参数： cid=1
+
+
+``` javascript
+{
+  "data": 4,
+  "info": "签到成功!",
+  "status": 1
+}
+```
+
+**12.<span id="postQuestion">提交问题</span>**
+
+###### 接口功能
+
+> 在指定课程id下提交问题
+
+###### URL
+
+> [/student.php/Index/postQuestion]()
+
+###### 返回格式
+
+> JSON
+
+###### HTTP请求方式
+
+> POST
+
+###### 请求参数
+
+> 参数 | 必选 | 类型 | 说明
+> ---|----|----|---
+> cid | 是 | int | 指定课程id
+> question | 是 | string | 待提问的内容
+
+###### 返回字段
+
+> 参数 | 类型 | 说明
+> ---|----|---
+> data | int | 问题id
+> info | string | 提示信息(unicode)
+> status | int | 状态代码,0:失败,1:成功
+
+###### 接口示例
+
+> 地址：> [/student.php/Index/postQuestion]()
+> 
+> 参数： cid=1& question=问题问题
+
+
+``` javascript
+{
+  "data": 3,
+  "info": "提交成功!",
   "status": 1
 }
 ```

@@ -54,7 +54,7 @@ class IndexAction extends Action {
         $related = (int)I('post.related');
         $questionId = (int)I('post.qid');
         $where = array();
-        if($courseId)$where['tsc_answered.cid'] = "$cid";
+        if($courseId)$where['tsc_answered.cid'] = "$courseId";
         if($related)$where['tsc_answered.sid'] = "$id";
         if($questionId)$where['tsc_answered.id'] = "$questionId";
         $ret = M('answered')->where($where)
@@ -139,9 +139,21 @@ class IndexAction extends Action {
         if(!($courseId))$this->ajaxReturn(0,"课程id不能为空!",0);
         $ret = M('course')->where('allowed = 1 and id = %d',$courseId)->select();
         if(!$ret)$this->ajaxReturn(0,"当前时间不允许签到!",0);
-        $date = date('Y-m-d H:i:s');
-        $ret = M('punch')->add(array('sid'=>"$id",'cid'=>"$courseId",'datetime'=>"$date"));
+        $datetime = date('Y-m-d H:i:s');
+        $ret = M('punch')->add(array('sid'=>"$id",'cid'=>"$courseId",'datetime'=>"$datetime"));
         if($ret)$this->ajaxReturn((int)$ret,"签到成功!",1);
         $this->ajaxReturn(0,"签到失败,请重试!",0);
+    }
+    public function postQuestion(){
+        $id = $this->login();
+        $courseId = (int)I('post.cid');
+        if(!($courseId))$this->ajaxReturn(0,"课程id不能为空!",0);
+        $question = I('post.question');
+        if(!($question))$this->ajaxReturn(0,"提问内容不能为空!",0);
+        $updatetime = date('Y-m-d H:i:s');
+        $ret = M('answered')->add(array('sid'=>"$id",'cid'=>"$courseId",
+        'question'=>"$question",'updatetime'=>"$updatetime"));
+        if($ret)$this->ajaxReturn((int)$ret,"提交成功!",1);
+        $this->ajaxReturn(0,"提交失败,可能是课程id不存在,请确认后重试!",0);
     }
 }

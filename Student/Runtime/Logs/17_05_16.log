@@ -662,3 +662,480 @@ SQL: SHOW COLUMNS FROM `tsc_punch` [ RunTime:0.003135s ]
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
 SQL: SELECT * FROM `tsc_punch` WHERE ( sid = 2 and cid = 1 ) ORDER BY datetime desc  [ RunTime:0.000429s ]
 
+[ 2017-05-16T17:09:32+08:00 ] 127.0.0.1 /student.php/Index/getPunchList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001126s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001193s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000595s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000640s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_punch` [ RunTime:0.002541s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_punch` WHERE ( sid = 2 and cid = 1 ) ORDER BY datetime desc  [ RunTime:0.000344s ]
+
+[ 2017-05-16T17:09:38+08:00 ] 127.0.0.1 /student.php/Index/punchCard
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000602s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000667s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000653s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000718s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_course` [ RunTime:0.003019s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_course` WHERE ( allowed = 1 and id = 1 )  [ RunTime:0.000378s ]
+SQL: SHOW COLUMNS FROM `tsc_punch` [ RunTime:0.006499s ]
+SQL: INSERT INTO `tsc_punch` (`sid`,`cid`,`datetime`) VALUES (2,1,'2017-05-16 17:09:38') [ RunTime:0.110561s ]
+
+[ 2017-05-16T17:09:43+08:00 ] 127.0.0.1 /student.php/Index/punchCard
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000562s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000621s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000421s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000462s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_course` [ RunTime:0.002621s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_course` WHERE ( allowed = 1 and id = 2 )  [ RunTime:0.000320s ]
+
+[ 2017-05-16T17:09:46+08:00 ] 127.0.0.1 /student.php/Index/punchCard
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000589s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000650s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000431s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000472s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_course` [ RunTime:0.002705s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_course` WHERE ( allowed = 1 and id = 3 )  [ RunTime:0.000221s ]
+
+[ 2017-05-16T17:11:08+08:00 ] 127.0.0.1 /student.php/Index/postQuestion
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000646s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000724s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000753s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000810s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_answered` [ RunTime:0.002446s ]
+NOTIC: [8] Undefined variable: updatetimedatetime G:\LocalWeb\test4\Student\Lib\Action\IndexAction.class.php 第 154 行.
+SQL: INSERT INTO `tsc_answered` (`sid`,`cid`,`question`,`updatetime`) VALUES (2,2,'','') [ RunTime:0.117475s ]
+ERR: 1452:Cannot add or update a child row: a foreign key constraint fails (`tsclass`.`tsc_answered`, CONSTRAINT `existed cid` FOREIGN KEY (`cid`) REFERENCES `tsc_course` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+ [ SQL语句 ] : INSERT INTO `tsc_answered` (`sid`,`cid`,`question`,`updatetime`) VALUES (2,2,'','')
+
+[ 2017-05-16T17:11:30+08:00 ] 127.0.0.1 /student.php/Index/postQuestion
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000567s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000627s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000427s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000469s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_answered` [ RunTime:0.003280s ]
+NOTIC: [8] Undefined variable: updatetimedatetime G:\LocalWeb\test4\Student\Lib\Action\IndexAction.class.php 第 154 行.
+SQL: INSERT INTO `tsc_answered` (`sid`,`cid`,`question`,`updatetime`) VALUES (2,1,'','') [ RunTime:0.052753s ]
+
+[ 2017-05-16T17:11:48+08:00 ] 127.0.0.1 /student.php/Index/postQuestion
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001035s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001097s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000741s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000800s ]
+
+[ 2017-05-16T17:11:58+08:00 ] 127.0.0.1 /student.php/Index/postQuestion
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000557s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000618s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000481s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_answered` [ RunTime:0.003369s ]
+NOTIC: [8] Undefined variable: updatetimedatetime G:\LocalWeb\test4\Student\Lib\Action\IndexAction.class.php 第 155 行.
+SQL: INSERT INTO `tsc_answered` (`sid`,`cid`,`question`,`updatetime`) VALUES (2,1,'问题问题','') [ RunTime:0.107819s ]
+
+[ 2017-05-16T17:12:30+08:00 ] 127.0.0.1 /student.php/Index/postQuestion
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000784s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000877s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000561s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000607s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_answered` [ RunTime:0.002981s ]
+SQL: INSERT INTO `tsc_answered` (`sid`,`cid`,`question`,`updatetime`) VALUES (2,1,'问题问题','2017-05-16 17:12:29') [ RunTime:0.088776s ]
+
+[ 2017-05-16T17:14:03+08:00 ] 127.0.0.1 /student.php/Index/getAnsweredList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000996s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001063s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000596s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000641s ]
+NOTIC: [8] Undefined variable: cid G:\LocalWeb\test4\Student\Lib\Action\IndexAction.class.php 第 57 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_answered` [ RunTime:0.003192s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+SQL: SELECT tsc_answered.id,tsc_answered.question,tsc_answered.answer,tsc_course.title,tsc_course.id as cid,tsc_teacher.username as teacher,tsc_student.username as student FROM `tsc_answered` LEFT JOIN tsc_course ON tsc_answered.cid = tsc_course.id LEFT JOIN tsc_teacher ON tsc_course.tid = tsc_teacher.id LEFT JOIN tsc_student ON tsc_answered.sid = tsc_student.id WHERE ( tsc_answered.cid = '' ) AND ( tsc_answered.sid = '2' ) ORDER BY updatetime desc LIMIT 0,20   [ RunTime:0.000372s ]
+
+[ 2017-05-16T17:14:14+08:00 ] 127.0.0.1 /student.php/Index/getAnsweredList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000633s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000701s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000479s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000522s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_student` [ RunTime:0.002562s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `id` FROM `tsc_student` WHERE ( username="test" and password="e10adc3949ba59abbe56e057f20f883e" ) LIMIT 1   [ RunTime:0.039526s ]
+
+[ 2017-05-16T17:14:16+08:00 ] 127.0.0.1 /student.php/Index/getAnsweredList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000570s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000630s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000473s ]
+NOTIC: [8] Undefined variable: cid G:\LocalWeb\test4\Student\Lib\Action\IndexAction.class.php 第 57 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_answered` [ RunTime:0.002915s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+SQL: SELECT tsc_answered.id,tsc_answered.question,tsc_answered.answer,tsc_course.title,tsc_course.id as cid,tsc_teacher.username as teacher,tsc_student.username as student FROM `tsc_answered` LEFT JOIN tsc_course ON tsc_answered.cid = tsc_course.id LEFT JOIN tsc_teacher ON tsc_course.tid = tsc_teacher.id LEFT JOIN tsc_student ON tsc_answered.sid = tsc_student.id WHERE ( tsc_answered.cid = '' ) AND ( tsc_answered.sid = '1' ) ORDER BY updatetime desc LIMIT 0,20   [ RunTime:0.000445s ]
+
+[ 2017-05-16T17:14:52+08:00 ] 127.0.0.1 /student.php/Index/getAnsweredList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000559s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000618s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000421s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000462s ]
+NOTIC: [8] Undefined variable: cid G:\LocalWeb\test4\Student\Lib\Action\IndexAction.class.php 第 57 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_answered` [ RunTime:0.004037s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+SQL: SELECT tsc_answered.id,tsc_answered.question,tsc_answered.answer,tsc_course.title,tsc_course.id as cid,tsc_teacher.username as teacher,tsc_student.username as student FROM `tsc_answered` LEFT JOIN tsc_course ON tsc_answered.cid = tsc_course.id LEFT JOIN tsc_teacher ON tsc_course.tid = tsc_teacher.id LEFT JOIN tsc_student ON tsc_answered.sid = tsc_student.id WHERE ( tsc_answered.cid = '' ) AND ( tsc_answered.sid = '1' ) ORDER BY updatetime desc LIMIT 0,20   [ RunTime:0.000467s ]
+
+[ 2017-05-16T17:14:53+08:00 ] 127.0.0.1 /student.php/Index/getAnsweredList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000559s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000619s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000511s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000553s ]
+NOTIC: [8] Undefined variable: cid G:\LocalWeb\test4\Student\Lib\Action\IndexAction.class.php 第 57 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_answered` [ RunTime:0.002455s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+SQL: SELECT tsc_answered.id,tsc_answered.question,tsc_answered.answer,tsc_course.title,tsc_course.id as cid,tsc_teacher.username as teacher,tsc_student.username as student FROM `tsc_answered` LEFT JOIN tsc_course ON tsc_answered.cid = tsc_course.id LEFT JOIN tsc_teacher ON tsc_course.tid = tsc_teacher.id LEFT JOIN tsc_student ON tsc_answered.sid = tsc_student.id WHERE ( tsc_answered.cid = '' ) AND ( tsc_answered.sid = '1' ) ORDER BY updatetime desc LIMIT 0,20   [ RunTime:0.000371s ]
+
+[ 2017-05-16T17:15:12+08:00 ] 127.0.0.1 /student.php/Index/getAnsweredList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000565s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000625s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000425s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000466s ]
+NOTIC: [8] Undefined variable: cid G:\LocalWeb\test4\Student\Lib\Action\IndexAction.class.php 第 57 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_answered` [ RunTime:0.033647s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+SQL: SELECT tsc_answered.id,tsc_answered.question,tsc_answered.answer,tsc_course.title,tsc_course.id as cid,tsc_teacher.username as teacher,tsc_student.username as student FROM `tsc_answered` LEFT JOIN tsc_course ON tsc_answered.cid = tsc_course.id LEFT JOIN tsc_teacher ON tsc_course.tid = tsc_teacher.id LEFT JOIN tsc_student ON tsc_answered.sid = tsc_student.id WHERE ( tsc_answered.cid = '' ) AND ( tsc_answered.sid = '1' ) ORDER BY updatetime desc LIMIT 0,20   [ RunTime:0.000349s ]
+
+[ 2017-05-16T17:15:14+08:00 ] 127.0.0.1 /student.php/Index/getAnsweredList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000553s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000612s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000434s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000476s ]
+NOTIC: [8] Undefined variable: cid G:\LocalWeb\test4\Student\Lib\Action\IndexAction.class.php 第 57 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_answered` [ RunTime:0.002419s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+SQL: SELECT tsc_answered.id,tsc_answered.question,tsc_answered.answer,tsc_course.title,tsc_course.id as cid,tsc_teacher.username as teacher,tsc_student.username as student FROM `tsc_answered` LEFT JOIN tsc_course ON tsc_answered.cid = tsc_course.id LEFT JOIN tsc_teacher ON tsc_course.tid = tsc_teacher.id LEFT JOIN tsc_student ON tsc_answered.sid = tsc_student.id WHERE ( tsc_answered.cid = '' ) AND ( tsc_answered.sid = '1' ) ORDER BY updatetime desc LIMIT 0,20   [ RunTime:0.000331s ]
+
+[ 2017-05-16T17:15:31+08:00 ] 127.0.0.1 /student.php/Index/getAnsweredList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000559s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000618s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000426s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000465s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_answered` [ RunTime:0.002509s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+SQL: SELECT tsc_answered.id,tsc_answered.question,tsc_answered.answer,tsc_course.title,tsc_course.id as cid,tsc_teacher.username as teacher,tsc_student.username as student FROM `tsc_answered` LEFT JOIN tsc_course ON tsc_answered.cid = tsc_course.id LEFT JOIN tsc_teacher ON tsc_course.tid = tsc_teacher.id LEFT JOIN tsc_student ON tsc_answered.sid = tsc_student.id ORDER BY updatetime desc LIMIT 0,20   [ RunTime:0.040463s ]
+
+[ 2017-05-16T17:15:37+08:00 ] 127.0.0.1 /student.php/Index/getAnsweredList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000562s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000621s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000459s ]
+NOTIC: [8] Undefined variable: cid G:\LocalWeb\test4\Student\Lib\Action\IndexAction.class.php 第 57 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_answered` [ RunTime:0.002558s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+SQL: SELECT tsc_answered.id,tsc_answered.question,tsc_answered.answer,tsc_course.title,tsc_course.id as cid,tsc_teacher.username as teacher,tsc_student.username as student FROM `tsc_answered` LEFT JOIN tsc_course ON tsc_answered.cid = tsc_course.id LEFT JOIN tsc_teacher ON tsc_course.tid = tsc_teacher.id LEFT JOIN tsc_student ON tsc_answered.sid = tsc_student.id WHERE ( tsc_answered.cid = '' ) ORDER BY updatetime desc LIMIT 0,20   [ RunTime:0.000390s ]
+
+[ 2017-05-16T17:15:53+08:00 ] 127.0.0.1 /student.php/Index/getAnsweredList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000554s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000612s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000421s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000461s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_answered` [ RunTime:0.002481s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+SQL: SELECT tsc_answered.id,tsc_answered.question,tsc_answered.answer,tsc_course.title,tsc_course.id as cid,tsc_teacher.username as teacher,tsc_student.username as student FROM `tsc_answered` LEFT JOIN tsc_course ON tsc_answered.cid = tsc_course.id LEFT JOIN tsc_teacher ON tsc_course.tid = tsc_teacher.id LEFT JOIN tsc_student ON tsc_answered.sid = tsc_student.id ORDER BY updatetime desc LIMIT 0,20   [ RunTime:0.000696s ]
+
+[ 2017-05-16T17:16:16+08:00 ] 127.0.0.1 /student.php/Index/getNoticeList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001466s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001539s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000947s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001053s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_notice` [ RunTime:0.003039s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+SQL: SELECT tsc_notice.id,tsc_notice.cid,tsc_course.title,tsc_notice.content,tsc_teacher.username as teacher,tsc_notice.datetime FROM `tsc_notice` LEFT JOIN tsc_course ON tsc_notice.cid = tsc_course.id LEFT JOIN tsc_teacher ON tsc_course.tid = tsc_teacher.id WHERE ( sid in (0,1) ) ORDER BY datetime desc LIMIT 0,20   [ RunTime:0.048948s ]
+
+[ 2017-05-16T17:16:28+08:00 ] 127.0.0.1 /student.php/Index/getCourseList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000557s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000616s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000538s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000595s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_selected` [ RunTime:0.002578s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+NOTIC: [8] Use of undefined constant tsc_ - assumed 'tsc_' G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php(604) : regexp code 第 1 行.
+SQL: SELECT tsc_course.id,tsc_course.title,tsc_course.description,tsc_course.image,tsc_teacher.username as teacher FROM `tsc_selected` LEFT JOIN tsc_course ON tsc_selected.cid = tsc_course.id LEFT JOIN tsc_teacher ON tsc_course.tid = tsc_teacher.id WHERE ( sid = 1 )  [ RunTime:0.000860s ]
+
+[ 2017-05-16T17:19:17+08:00 ] 127.0.0.1 /student.php/Index/getCourseware
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001127s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001210s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000835s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000904s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_courseware` [ RunTime:0.002614s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_courseware` WHERE ( pid = 6 )  [ RunTime:0.044692s ]
+
+[ 2017-05-16T17:21:09+08:00 ] 127.0.0.1 /student.php/Index/getHomework
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000567s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000625s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000474s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_homework` [ RunTime:0.002684s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_homework` WHERE ( pid = 6 )  [ RunTime:0.037496s ]
+
+[ 2017-05-16T17:26:58+08:00 ] 127.0.0.1 /student.php/Index/getPunchList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001086s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001162s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000607s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000652s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_punch` [ RunTime:0.002436s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_punch` WHERE ( sid = 1 and cid = 1 ) ORDER BY datetime desc  [ RunTime:0.000290s ]
+
+[ 2017-05-16T17:27:04+08:00 ] 127.0.0.1 /student.php/Index/getPunchList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000570s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000632s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000436s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000478s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_student` [ RunTime:0.002453s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `id` FROM `tsc_student` WHERE ( username="student" and password="e10adc3949ba59abbe56e057f20f883e" ) LIMIT 1   [ RunTime:0.000229s ]
+
+[ 2017-05-16T17:27:06+08:00 ] 127.0.0.1 /student.php/Index/getPunchList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000568s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000630s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000485s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000533s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_punch` [ RunTime:0.002768s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_punch` WHERE ( sid = 2 and cid = 1 ) ORDER BY datetime desc  [ RunTime:0.000301s ]
+
+[ 2017-05-16T17:29:27+08:00 ] 127.0.0.1 /student.php/Index/getPunchList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000998s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001062s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000751s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000815s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_student` [ RunTime:0.002535s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `id` FROM `tsc_student` WHERE ( username="test" and password="e10adc3949ba59abbe56e057f20f883e" ) LIMIT 1   [ RunTime:0.000190s ]
+
+[ 2017-05-16T17:29:35+08:00 ] 127.0.0.1 /student.php/Index/punchCard
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000555s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000615s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000425s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000466s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_course` [ RunTime:0.002615s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_course` WHERE ( allowed = 1 and id = 1 )  [ RunTime:0.000213s ]
+SQL: SHOW COLUMNS FROM `tsc_punch` [ RunTime:0.002178s ]
+SQL: INSERT INTO `tsc_punch` (`sid`,`cid`,`datetime`) VALUES (1,1,'2017-05-16 17:29:35') [ RunTime:0.081003s ]
+
+[ 2017-05-16T17:32:22+08:00 ] 127.0.0.1 /student.php/Index/postQuestion
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001199s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001275s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000590s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000634s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_answered` [ RunTime:0.002520s ]
+SQL: INSERT INTO `tsc_answered` (`sid`,`cid`,`question`,`updatetime`) VALUES (1,1,'问题问题','2017-05-16 17:32:22') [ RunTime:0.080800s ]
+
