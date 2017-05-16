@@ -1139,3 +1139,39 @@ NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be rem
 SQL: SHOW COLUMNS FROM `tsc_answered` [ RunTime:0.002520s ]
 SQL: INSERT INTO `tsc_answered` (`sid`,`cid`,`question`,`updatetime`) VALUES (1,1,'问题问题','2017-05-16 17:32:22') [ RunTime:0.080800s ]
 
+[ 2017-05-16T22:45:00+08:00 ] 127.0.0.1 /student.php/Index/getHomework
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001149s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001205s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000662s ]
+NOTIC: [8] Undefined index: user G:\LocalWeb\test4\Student\Lib\Action\IndexAction.class.php 第 6 行.
+
+[ 2017-05-16T22:45:04+08:00 ] 127.0.0.1 /student.php/Index/getHomework
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000429s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000475s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000355s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_student` [ RunTime:0.025030s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `id` FROM `tsc_student` WHERE ( username="test" and password="e10adc3949ba59abbe56e057f20f883e" ) LIMIT 1   [ RunTime:0.000229s ]
+
+[ 2017-05-16T22:45:06+08:00 ] 127.0.0.1 /student.php/Index/getHomework
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000450s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000500s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000408s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000453s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_homework` [ RunTime:0.001982s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_homework` WHERE ( pid = 6 )  [ RunTime:0.000173s ]
+

@@ -514,7 +514,8 @@
 > ---|----|---
 > data | Array | 列表数组
 > id | data->string | 作业id
-> question | data->string | 问题集合(使用换行分割)
+> question | data->string | 问题题目
+> choice | data->string | 选项集合(换行符分割)
 > answer | data->string | 正确答案(0为第1行)
 > pid | data->string | 小节id
 > info | string | 提示信息(unicode)
@@ -532,8 +533,9 @@
   "data": [
     {
       "id": "1",
-      "question": "问题1\r\n问题2\r\n问题3\r\n问题4",
-      "answer": "0",
+      "question": "这个问题的正确答案是选择2,你选哪个?",
+      "choices": "选择1\r\n选择2\r\n选择3\r\n选择4",
+      "answer": "1",
       "pid": "6"
     }
   ],
