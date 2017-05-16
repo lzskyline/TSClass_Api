@@ -1,0 +1,401 @@
+[ 2017-05-16T12:32:22+08:00 ] 127.0.0.1 /student.php/Index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000756s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000801s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000454s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000489s ]
+ERR: 非法操作:index
+
+[ 2017-05-16T12:34:37+08:00 ] 127.0.0.1 /student.php/Index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000438s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000489s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000363s ]
+ERR: 非法操作:index
+
+[ 2017-05-16T12:34:52+08:00 ] 127.0.0.1 /student.php/Index/addCourse
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000506s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000557s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000386s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000419s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_student` [ RunTime:0.027208s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `id` FROM `tsc_student` WHERE ( username="www" and password="96e79218965eb72c92a549dd5a330112" ) LIMIT 1   [ RunTime:0.000233s ]
+
+[ 2017-05-16T12:35:03+08:00 ] 127.0.0.1 /student.php/Index/addCourse
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000436s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000485s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000347s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000381s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_student` [ RunTime:0.002142s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `id` FROM `tsc_student` WHERE ( username="test" and password="e10adc3949ba59abbe56e057f20f883e" ) LIMIT 1   [ RunTime:0.000197s ]
+
+[ 2017-05-16T12:35:30+08:00 ] 127.0.0.1 /student.php/Index/addCourse
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000426s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000473s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000365s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_student` [ RunTime:0.002693s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `id` FROM `tsc_student` WHERE ( username="test" and password="e10adc3949ba59abbe56e057f20f883e" ) LIMIT 1   [ RunTime:0.000275s ]
+
+[ 2017-05-16T12:35:31+08:00 ] 127.0.0.1 /student.php/Index/addCourse
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000486s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000549s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000346s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000381s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_student` [ RunTime:0.002930s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `id` FROM `tsc_student` WHERE ( username="test" and password="e10adc3949ba59abbe56e057f20f883e" ) LIMIT 1   [ RunTime:0.000189s ]
+
+[ 2017-05-16T12:35:32+08:00 ] 127.0.0.1 /student.php/Index/addCourse
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000437s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000486s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000354s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_student` [ RunTime:0.002042s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `id` FROM `tsc_student` WHERE ( username="test" and password="e10adc3949ba59abbe56e057f20f883e" ) LIMIT 1   [ RunTime:0.000143s ]
+
+[ 2017-05-16T12:35:38+08:00 ] 127.0.0.1 /student.php/Index/addCourse
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000474s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000540s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000344s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000374s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_course` [ RunTime:0.053658s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_course` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000227s ]
+SQL: SHOW COLUMNS FROM `tsc_selected` [ RunTime:0.028288s ]
+SQL: INSERT INTO `tsc_selected` (`cid`,`sid`,`datetime`) VALUES (1,1,'2017-05-16 12:35:37') [ RunTime:0.048551s ]
+ERR: 1062:Duplicate entry '1-1' for key 'unique selected'
+ [ SQL语句 ] : INSERT INTO `tsc_selected` (`cid`,`sid`,`datetime`) VALUES (1,1,'2017-05-16 12:35:37')
+
+[ 2017-05-16T12:35:40+08:00 ] 127.0.0.1 /student.php/Index/addCourse
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000437s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000485s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000354s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000386s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_course` [ RunTime:0.007655s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_course` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000197s ]
+
+[ 2017-05-16T12:36:28+08:00 ] 127.0.0.1 /student.php/Index/addCourse
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001128s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001211s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000707s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000748s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_student` [ RunTime:0.002148s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `id` FROM `tsc_student` WHERE ( username="student" and password="e10adc3949ba59abbe56e057f20f883e" ) LIMIT 1   [ RunTime:0.000188s ]
+
+[ 2017-05-16T12:36:30+08:00 ] 127.0.0.1 /student.php/Index/addCourse
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000429s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000477s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000455s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_course` [ RunTime:0.002072s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_course` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000248s ]
+SQL: SHOW COLUMNS FROM `tsc_selected` [ RunTime:0.020378s ]
+SQL: INSERT INTO `tsc_selected` (`cid`,`sid`,`datetime`) VALUES (1,2,'2017-05-16 12:36:30') [ RunTime:0.065086s ]
+
+[ 2017-05-16T13:37:52+08:00 ] 127.0.0.1 /student.php/Index/getChapterList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001301s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001361s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000613s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000652s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_chapter` [ RunTime:0.002470s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=2 )  [ RunTime:0.000209s ]
+
+[ 2017-05-16T13:37:59+08:00 ] 127.0.0.1 /student.php/Index/getChapterList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000432s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000481s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000358s ]
+
+[ 2017-05-16T13:38:01+08:00 ] 127.0.0.1 /student.php/Index/getChapterList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000428s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000483s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000340s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000372s ]
+
+[ 2017-05-16T13:43:45+08:00 ] 127.0.0.1 /student.php/Index/getChapterList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000913s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001011s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000457s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000492s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_chapter` [ RunTime:0.002024s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=0 )  [ RunTime:0.000266s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=1 )  [ RunTime:0.000201s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=2 )  [ RunTime:0.000177s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=3 )  [ RunTime:0.000170s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=4 )  [ RunTime:0.000179s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=5 )  [ RunTime:0.000175s ]
+
+[ 2017-05-16T13:43:54+08:00 ] 127.0.0.1 /student.php/Index/getChapterList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000425s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000470s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_chapter` [ RunTime:0.002241s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=0 )  [ RunTime:0.000163s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=1 )  [ RunTime:0.000111s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=2 )  [ RunTime:0.000107s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=3 )  [ RunTime:0.000104s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=4 )  [ RunTime:0.000104s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=5 )  [ RunTime:0.000099s ]
+
+[ 2017-05-16T13:43:55+08:00 ] 127.0.0.1 /student.php/Index/getChapterList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000463s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000510s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000381s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_chapter` [ RunTime:0.002075s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=0 )  [ RunTime:0.000211s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=1 )  [ RunTime:0.000158s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=2 )  [ RunTime:0.000159s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=3 )  [ RunTime:0.000157s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=4 )  [ RunTime:0.000161s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=5 )  [ RunTime:0.000157s ]
+
+[ 2017-05-16T13:43:58+08:00 ] 127.0.0.1 /student.php/Index/getChapterList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000693s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000808s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000466s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_chapter` [ RunTime:0.002074s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=0 )  [ RunTime:0.000202s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=1 )  [ RunTime:0.000161s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=2 )  [ RunTime:0.000161s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=3 )  [ RunTime:0.000165s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=4 )  [ RunTime:0.000164s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=5 )  [ RunTime:0.000160s ]
+
+[ 2017-05-16T13:44:05+08:00 ] 127.0.0.1 /student.php/Index/getChapterList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000627s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000699s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000372s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000414s ]
+
+[ 2017-05-16T13:44:07+08:00 ] 127.0.0.1 /student.php/Index/getChapterList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000588s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000648s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000389s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_chapter` [ RunTime:0.002178s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=0 )  [ RunTime:0.000175s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=1 )  [ RunTime:0.000156s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=2 )  [ RunTime:0.000151s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=3 )  [ RunTime:0.000202s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=4 )  [ RunTime:0.000163s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=5 )  [ RunTime:0.000173s ]
+
+[ 2017-05-16T13:44:09+08:00 ] 127.0.0.1 /student.php/Index/getChapterList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000435s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000482s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000361s ]
+
+[ 2017-05-16T13:44:11+08:00 ] 127.0.0.1 /student.php/Index/getChapterList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000579s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000644s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000333s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000363s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_chapter` [ RunTime:0.002301s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=0 )  [ RunTime:0.000219s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=1 )  [ RunTime:0.000183s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=2 )  [ RunTime:0.000184s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=3 )  [ RunTime:0.000177s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=4 )  [ RunTime:0.000156s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=5 )  [ RunTime:0.000158s ]
+
+[ 2017-05-16T13:44:13+08:00 ] 127.0.0.1 /student.php/Index/getChapterList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000438s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000485s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000342s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_chapter` [ RunTime:0.002352s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=12 and pid=0 )  [ RunTime:0.000191s ]
+
+[ 2017-05-16T13:45:05+08:00 ] 127.0.0.1 /student.php/Index/getChapterList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000616s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000672s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000469s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000508s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_chapter` [ RunTime:0.002251s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=0 )  [ RunTime:0.000199s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=1 )  [ RunTime:0.000128s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=6 )  [ RunTime:0.000124s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=2 )  [ RunTime:0.000115s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=3 )  [ RunTime:0.000118s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=7 )  [ RunTime:0.000111s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=8 )  [ RunTime:0.000130s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=4 )  [ RunTime:0.000116s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=5 )  [ RunTime:0.000113s ]
+
+[ 2017-05-16T13:49:18+08:00 ] 127.0.0.1 /student.php/Index/getChapterList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000862s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000917s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000643s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000685s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\LocalWeb\ThinkPHP3.1\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `tsc_chapter` [ RunTime:0.002046s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=0 )  [ RunTime:0.000212s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=1 )  [ RunTime:0.000145s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=6 )  [ RunTime:0.000146s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=2 )  [ RunTime:0.000174s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=3 )  [ RunTime:0.000192s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=7 )  [ RunTime:0.000173s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=8 )  [ RunTime:0.000176s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=4 )  [ RunTime:0.000172s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `tsc_chapter` WHERE ( cid=1 and pid=5 )  [ RunTime:0.000161s ]
+

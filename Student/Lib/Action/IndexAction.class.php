@@ -11,7 +11,7 @@ class IndexAction extends Action {
         $ret = M('student')->where('username="%s" and password="%s"',$u,$p)->getField('id');
         if(!$ret)$this->ajaxReturn(0,"用户名或密码错误!",0);
         $_SESSION["user"] = (int)$ret;
-        $this->ajaxReturn((int)$ret,"登陆成功!",1);
+        $this->ajaxReturn((int)$ret,"登录成功!",1);
     }
     public function logout(){
         session_destroy();
@@ -30,9 +30,9 @@ class IndexAction extends Action {
     public function addCourse(){
         $id = $this->login();
         $courseId = (int)I('post.cid');
-        if(!$courseId)$this->ajaxReturn(0,"课程ID不能为空",0);
+        if(!$courseId)$this->ajaxReturn(0,"课程ID不能为空!",0);
         $ret = M('course')->find($courseId);
-        if(!$ret)$this->ajaxReturn(0,"课程ID不能为空",0);
+        if(!$ret)$this->ajaxReturn(0,"课程ID不存在!",0);
         $date = date('Y-m-d H:i:s');
         $ret = M('selected')->add(array('cid'=>"$ret[id]",'sid'=>"$id",'datetime'=>"$date"));
         if($ret)$this->ajaxReturn((int)$ret,"添加课程成功!",1);
@@ -78,10 +78,32 @@ class IndexAction extends Action {
         if($ret)$this->ajaxReturn($ret,"读取成功!",1);
         $this->ajaxReturn(null,"暂无相关内容!",0);
     }
-    public function debug(){
-        echo "get\r\n";
-        var_dump(I('get.'));
-        echo "post\r\n";
-        var_dump(I('post.'));
+    protected function getChapter($courseId,$id=0){
+        $ret = M("chapter")->where("cid=%d and pid=%d",$courseId,$id)->select();
+        $tmp = array();
+        if(empty($ret))return NULL;
+        foreach($ret as $i){
+            /*
+            $tmp[] = array(
+                "text"=>"$i[title]",
+                "tags"=>["添加小节"],
+                "href"=>"javascript:getChapter('$i[id]');",
+                "nodes"=>$this->getChapter($courseId,$i["id"])
+                );
+            */
+            $tmp[] = array(
+                "title" => "$i[title]",
+                "nodes" => $this->getChapter($courseId,$i["id"])
+            );
+        }
+        return $tmp;
+    }
+    public function getChapterList(){
+        $id = $this->login();
+        $courseId = (int)I('post.cid');
+        if(!$courseId)$this->ajaxReturn(0,"课程ID不能为空!",0);
+        $ret = $this->getChapter($courseId,0);
+        if($ret)$this->ajaxReturn($ret,"读取成功!",1);
+        $this->ajaxReturn(null,"暂无相关内容!",0);
     }
 }

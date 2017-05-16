@@ -8,6 +8,7 @@
 4.  <a href="#getCourseList">获取课程列表</a>
 5.  <a href="#getAnsweredList">获取问答列表>/a>
 6.  <a href="#getNoticeList">获取消息列表>/a>
+7.  <a href="#getChapterList">获取章节列表>/a>
 
 ***
 
@@ -169,11 +170,11 @@
 > 参数 | 类型 | 说明
 > ---|----|---
 > data | Array | 课程列表
-> id | data | 课程id
-> title | data | 课程名
-> description | data | 课程介绍
-> image | data | 教师姓名
-> username | data | 课程封面图url
+> id | data->string | 课程id
+> title | data->string | 课程名
+> description | data->string | 课程介绍
+> image | data->string | 教师姓名
+> username | data->string | 课程封面图url
 > info | string | 提示信息(unicode)
 > status | int | 状态代码,0:失败,1:成功
 
@@ -220,13 +221,13 @@
 > 参数 | 类型 | 说明
 > ---|----|---
 > data | Array | 课程列表
-> id | data | 问题id
-> question | data | 问题标题
-> answer | data | 问题答复
-> cid | data | 课程id
-> title | data | 课程名称
-> teacher | data | 老师姓名
-> student | data | 学生姓名
+> id | data->string | 问题id
+> question | data->string | 问题标题
+> answer | data->string | 问题答复
+> cid | data->string | 课程id
+> title | data->string | 课程名称
+> teacher | data->string | 老师姓名
+> student | data->string | 学生姓名
 > info | string | 提示信息(unicode)
 > status | int | 状态代码,0:失败,1:成功
 
@@ -268,12 +269,12 @@
 > 参数 | 类型 | 说明
 > ---|----|---
 > data | Array | 课程列表
-> id | data | 消息id
-> cid | data | 课程id
-> title | data | 课程名称
-> content | data | 通知内容
-> teacher | data | 老师姓名
-> datetime | data | 通知时间
+> id | data->string | 消息id
+> cid | data->string | 课程id
+> title | data->string | 课程名称
+> content | data->string | 通知内容
+> teacher | data->string | 老师姓名
+> datetime | data->string | 通知时间
 > info | string | 提示信息(unicode)
 > status | int | 状态代码,0:失败,1:成功
 
@@ -286,4 +287,88 @@
 
 ``` javascript
 {"data":[{"id":"1","cid":"1","title":"JAVA课程设计","content":"通知通知!","teacher":"teacher","datetime":"2017-05-15 15:22:58"}],"info":"读取成功!","status":1}
+```
+
+**7.<span id="getChapterList">获取章节列表</span>**
+
+###### 接口功能
+
+> 获取某一课程的全部章节
+
+###### URL
+
+> [/student.php/Index/getChapterList]()
+
+###### 返回格式
+
+> JSON
+
+###### HTTP请求方式
+
+> POST
+
+###### 请求参数
+
+> 参数 | 必选 | 类型 | 说明
+> ---|----|----|---
+> cid | 是 | int | 指定课程id
+
+###### 返回字段
+
+> 参数 | 类型 | 说明
+> ---|----|---
+> data | Array | 课程列表
+> title | data->string | 章名称
+> nodes | data->Array | 节点数组(递归数组,格式与data相同)
+> info | string | 提示信息(unicode)
+> status | int | 状态代码,0:失败,1:成功
+
+###### 接口示例
+
+> 地址：> [/student.php/Index/getChapterList]()
+> 
+> 参数： cid=1
+
+
+``` javascript
+{
+  "data": [
+    {
+      "title": "序章",
+      "nodes": [
+        {
+          "title": "序章1小节",
+          "nodes": null
+        }
+      ]
+    },
+    {
+      "title": "简述",
+      "nodes": null
+    },
+    {
+      "title": "入门",
+      "nodes": [
+        {
+          "title": "入门1小节",
+          "nodes": null
+        },
+        {
+          "title": "入门2小节",
+          "nodes": null
+        }
+      ]
+    },
+    {
+      "title": "精通",
+      "nodes": null
+    },
+    {
+      "title": "实战",
+      "nodes": null
+    }
+  ],
+  "info": "读取成功!",
+  "status": 1
+}
 ```
