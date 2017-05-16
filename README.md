@@ -136,7 +136,7 @@
 
 > 地址：> [/student.php/Index/addCourse]()
 > 
-> 参数： 无
+> 参数： cid=1
 
 
 ``` javascript

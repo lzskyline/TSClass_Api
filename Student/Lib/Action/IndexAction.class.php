@@ -103,9 +103,45 @@ class IndexAction extends Action {
     public function getChapterList(){
         $id = $this->login();
         $courseId = (int)I('post.cid');
-        if(!$courseId)$this->ajaxReturn(0,"课程ID不能为空!",0);
+        if(!$courseId)$this->ajaxReturn(null,"课程ID不能为空!",0);
         $ret = $this->getChapter($courseId,0);
         if($ret)$this->ajaxReturn($ret,"读取成功!",1);
         $this->ajaxReturn(null,"暂无相关内容!",0);
+    }
+    public function getCourseware(){
+        $id = $this->login();
+        $pid = (int)I('post.pid');
+        if(!$pid)$this->ajaxReturn(null,"章节ID不能为空!",0);
+        $ret = M('courseware')->where('pid = %d',$pid)->select();
+        if($ret)$this->ajaxReturn($ret,"读取成功!",1);
+        $this->ajaxReturn(null,"暂无相关内容!",0);
+    }
+    public function getHomework(){
+        $id = $this->login();
+        $pid = (int)I('post.pid');
+        if(!$pid)$this->ajaxReturn(null,"章节ID不能为空!",0);
+        $ret = M('homework')->where('pid = %d',$pid)->select();
+        if($ret)$this->ajaxReturn($ret,"读取成功!",1);
+        $this->ajaxReturn(null,"暂无相关内容!",0);
+    }
+    public function getPunchList(){
+        $id = $this->login();
+        $courseId = (int)I('post.cid');
+        if(!($courseId))$this->ajaxReturn(null,"课程id不能为空!",0);
+        $ret = M('punch')->where('sid = %d and cid = %d',$id,$courseId)
+        ->order('datetime desc')->select();
+        if($ret)$this->ajaxReturn($ret,"读取成功!",1);
+        $this->ajaxReturn(null,"暂无相关内容!",0);
+    }
+    public function punchCard(){
+        $id = $this->login();
+        $courseId = (int)I('post.cid');
+        if(!($courseId))$this->ajaxReturn(0,"课程id不能为空!",0);
+        $ret = M('course')->where('allowed = 1 and id = %d',$courseId)->select();
+        if(!$ret)$this->ajaxReturn(0,"当前时间不允许签到!",0);
+        $date = date('Y-m-d H:i:s');
+        $ret = M('punch')->add(array('sid'=>"$id",'cid'=>"$courseId",'datetime'=>"$date"));
+        if($ret)$this->ajaxReturn((int)$ret,"签到成功!",1);
+        $this->ajaxReturn(0,"签到失败,请重试!",0);
     }
 }
