@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 100121
 File Encoding         : 65001
 
-Date: 2017-05-16 17:37:44
+Date: 2017-05-16 22:46:59
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -108,7 +108,8 @@ INSERT INTO `tsc_courseware` VALUES ('1', '序章课件', 'http://baidu.com/', '
 DROP TABLE IF EXISTS `tsc_homework`;
 CREATE TABLE `tsc_homework` (
   `id` int(6) NOT NULL AUTO_INCREMENT,
-  `question` varchar(255) NOT NULL,
+  `question` varchar(100) NOT NULL DEFAULT '',
+  `choices` varchar(200) NOT NULL DEFAULT '',
   `answer` smallint(1) NOT NULL DEFAULT '0',
   `pid` int(6) NOT NULL,
   PRIMARY KEY (`id`)
@@ -117,7 +118,7 @@ CREATE TABLE `tsc_homework` (
 -- ----------------------------
 -- Records of tsc_homework
 -- ----------------------------
-INSERT INTO `tsc_homework` VALUES ('1', '问题1\r\n问题2\r\n问题3\r\n问题4', '0', '6');
+INSERT INTO `tsc_homework` VALUES ('1', '这个问题的正确答案是选择2,你选哪个?', '选择1\r\n选择2\r\n选择3\r\n选择4', '1', '6');
 
 -- ----------------------------
 -- Table structure for tsc_notice

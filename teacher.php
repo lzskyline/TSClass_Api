@@ -1,6 +1,6 @@
 <?php
-    define('APP_NAME', 'Student');
-    define('APP_PATH', './Student/');
+    define('APP_NAME', 'Teacher');
+    define('APP_PATH', './Teacher/');
     define('PUBLIC','./Public/');
     define("APP_DEBUG",true);
 

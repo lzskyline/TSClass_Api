@@ -83,16 +83,6 @@ class IndexAction extends Action {
         $tmp = array();
         if(empty($ret))return NULL;
         foreach($ret as $i){
-            /*
-            $tmp[] = array(
-                "text"=>"$i[title]",
-                "tags"=>["添加小节"],
-                "href"=>"javascript:getChapter('$i[id]');",
-                "nodes"=>$this->getChapter($courseId,$i["id"])
-                );
-            */
-            //<script src="__PUBLIC__/js/bootstrap-treeview.js"></script>
-            //<div id="tree"></div>
             $tmp[] = array(
                 "id" => "$i[id]",
                 "title" => "$i[title]",

@@ -1,0 +1,10 @@
+[ 2017-05-20T17:28:19+08:00 ] 127.0.0.1 /student.php/Index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001769s ]
+INFO: [ route_check ] --END-- [ RunTime:0.011067s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead G:\LocalWeb\ThinkPHP3.1\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001048s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001108s ]
+ERR: 非法操作:index
+

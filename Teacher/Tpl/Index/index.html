@@ -1,0 +1,100 @@
+<include file='header' />
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <h1 class="page-header pull-left">课程列表</h1><button onclick="editCourse(0);" class="btn btn-primary pull-right">添加课程</button>
+    <div class="clearfix"></div>
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>课程编号</th>
+                    <th>课程图片</th>
+                    <th>课程名称</th>
+                    <th>课程简介</th>
+                    <th>允许签到</th>
+                    <th>课程管理</th>
+                </tr>
+            </thead>
+            <tbody>
+                <volist name="vo" id="vo" empty="$empty">
+                    <tr>
+                        <td width="8%"><a href="javascript:shareId('{$vo.title}','{$vo.id}');" title="分享此课程">{$vo.id|sprintf="%06d",###}</a></td>
+                        <td width="10%"><img src="/images/{$vo.image}" alt="{$vo.image}" class="img-responsive"></td>
+                        <td width="20%">{$vo.title}</td>
+                        <td width="30%">{$vo.description|mb_strimwidth=0,33,"..."}</td>
+                        <td width="8%">{$vo['allowed']?'<span style="color:green;">是</span>':'<span style="color:red;">否</span>'}</td>
+                        <td width="16">
+                            <a href="{:U('switchAllowed')}?id={$vo.id}&allowed={$vo.allowed}" class="btn btn-sm btn-{$vo['allowed']?'danger">关闭':'success">开启'}签到</a>
+                            <button onclick="editCourse({$vo.id});" class="btn btn-warning btn-sm">修改课程</button>
+                            <br><br>
+                            <button onclick="studentList({$vo.id});" class="btn btn-default btn-sm">学生列表</button>
+                            <button onclick="punchList({$vo.id});" class="btn btn-default btn-sm">签到列表</button>
+                        </td>
+                    </tr>
+                </volist>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="myModal" class="modal fade" role="dialog" style="margin-top: 10%;">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" id="modalTitle">Loading data...</h4>
+                </div>
+                <div class="modal-body" id="modalBody">
+                    <p>Loading data...</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="saveBtn" class="btn btn-primary">保存</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+</div>
+<script src="__PUBLIC__/js/jquery.min.js"></script>
+<script src="__PUBLIC__/js/bootstrap.min.js"></script>
+<script>
+    function editCourse(id) {
+        $("#modalTitle").text(id ? "修改" : "添加" + "课程");
+        $("#modalBody").load("{:U('editCourse')}?id=" + id, function () {
+            $("#saveBtn").show();
+            $("#myModal").modal("toggle");
+        })
+    }
+
+    function shareId(title, id) {
+        $("#modalTitle").text('分享课程ID');
+        $("#modalBody").load("{:U('shareId')}?title=" + title + "&id=" + id, function () {
+            $("#saveBtn").hide();
+            $("#myModal").modal("toggle");
+        })
+    }
+
+    function studentList(id) {
+        $("#modalTitle").text('上课学生列表');
+        $("#modalBody").load("{:U('studentList')}?id=" + id, function () {
+            $("#saveBtn").hide();
+            $("#myModal").modal("toggle");
+        })
+    }
+
+    function punchList(id) {
+        $("#modalTitle").text('上课签到列表');
+        $("#modalBody").load("{:U('punchList')}?id=" + id, function () {
+            $("#saveBtn").hide();
+            $("#myModal").modal("toggle");
+        })
+    }
+    $("#saveBtn").click(function () {
+        $("form").submit();
+    })
+</script>
+</body>
+
+</html>

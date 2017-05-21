@@ -1,0 +1,18 @@
+<form method="post" action="{:U('editCourse')}" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="title">课程ID: {$ret['id']?$ret['id']:'待创建'|sprintf="%06s",###}</label>
+        <input type="hidden" class="form-control" id="id" name="id" value="{$ret.id}" required>
+    </div>
+    <div class="form-group">
+        <label for="title">课程名称:</label>
+        <input type="text" class="form-control" id="title" name="title" placeholder="在此键入课程名称" required value="{$ret.title}">
+    </div>
+    <div class="form-group">
+        <label for="image">课程图片(留空则不修改):</label>
+        <input type="file" accept="image/*" class="form-control" id="image" name="image" placeholder="在此上传课程图片">
+    </div>
+    <div class="form-group">
+        <label for="description">课程描述:</label>
+        <textarea class="form-control" rows="5" id="description" name="description" placeholder="在此键入课程描述" required>{$ret.description}</textarea>
+    </div>
+</form>

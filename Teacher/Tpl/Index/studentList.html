@@ -1,0 +1,30 @@
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th width="6%">#</th>
+                <th width="14%">学生姓名</th>
+                <th width="30%">课程名称</th>
+                <th width="30%">选课时间</th>
+                <th width="20">管理操作</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+<div class="table-responsive" style="max-height:400px;overflow-y:scroll;">
+    <table class="table table-hover">
+        <tbody>
+            <volist name="vo" id="vo" empty="$empty">
+                <tr>
+                    <td width="6%">{$vo.sid}</td>
+                    <td width="14%">{$vo.username}</td>
+                    <td width="30%">{$vo.title}</td>
+                    <td width="30%">{$vo.datetime}</td>
+                    <td width="20">
+                        <a href="{:U('removeStudent')}?sid={$vo.sid}&cid={$vo.cid}" class="btn btn-danger btn-sm">移除课程</a>
+                    </td>
+                </tr>
+            </volist>
+        </tbody>
+    </table>
+</div>
