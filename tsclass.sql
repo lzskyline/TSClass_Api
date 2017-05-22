@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 100121
 File Encoding         : 65001
 
-Date: 2017-05-16 22:46:59
+Date: 2017-05-22 22:58:52
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -36,9 +36,9 @@ CREATE TABLE `tsc_answered` (
 -- ----------------------------
 -- Records of tsc_answered
 -- ----------------------------
-INSERT INTO `tsc_answered` VALUES ('1', 'wenti', '1', 'daan', '1', '2017-05-15 14:44:37');
+INSERT INTO `tsc_answered` VALUES ('1', 'wenti', '1', '', '1', '2017-05-15 14:44:37');
 INSERT INTO `tsc_answered` VALUES ('2', '问题问题', '2', '', '1', '2017-05-16 17:12:29');
-INSERT INTO `tsc_answered` VALUES ('3', '问题问题', '1', '', '1', '2017-05-16 17:32:22');
+INSERT INTO `tsc_answered` VALUES ('3', '问题问题', '1', '', '1', '2017-05-21 23:31:04');
 
 -- ----------------------------
 -- Table structure for tsc_chapter
@@ -50,8 +50,10 @@ CREATE TABLE `tsc_chapter` (
   `title` varchar(20) NOT NULL,
   `pid` int(6) NOT NULL DEFAULT '0',
   `rank` smallint(3) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`id`),
+  KEY `existed course` (`cid`),
+  CONSTRAINT `existed course` FOREIGN KEY (`cid`) REFERENCES `tsc_course` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tsc_chapter
@@ -64,6 +66,8 @@ INSERT INTO `tsc_chapter` VALUES ('5', '1', '实战', '0', '0');
 INSERT INTO `tsc_chapter` VALUES ('6', '1', '序章1小节', '1', '0');
 INSERT INTO `tsc_chapter` VALUES ('7', '1', '入门1小节', '3', '0');
 INSERT INTO `tsc_chapter` VALUES ('8', '1', '入门2小节', '3', '0');
+INSERT INTO `tsc_chapter` VALUES ('9', '2', '测测测', '0', '0');
+INSERT INTO `tsc_chapter` VALUES ('15', '1', '1313', '14', '0');
 
 -- ----------------------------
 -- Table structure for tsc_course
@@ -78,12 +82,13 @@ CREATE TABLE `tsc_course` (
   `image` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `unique course` (`title`,`tid`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of tsc_course
 -- ----------------------------
 INSERT INTO `tsc_course` VALUES ('1', 'JAVA课程设计', '1', '1', '描述描述,不可描述', '1.jpg');
+INSERT INTO `tsc_course` VALUES ('2', 'JAVA面向对象设计', '0', '1', '描述JAVA', '5921718db3491.jpg');
 
 -- ----------------------------
 -- Table structure for tsc_courseware
@@ -95,12 +100,13 @@ CREATE TABLE `tsc_courseware` (
   `url` varchar(255) NOT NULL,
   `pid` int(6) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tsc_courseware
 -- ----------------------------
 INSERT INTO `tsc_courseware` VALUES ('1', '序章课件', 'http://baidu.com/', '6');
+INSERT INTO `tsc_courseware` VALUES ('3', '百度', 'http://baidu.com/', '7');
 
 -- ----------------------------
 -- Table structure for tsc_homework
@@ -113,7 +119,7 @@ CREATE TABLE `tsc_homework` (
   `answer` smallint(1) NOT NULL DEFAULT '0',
   `pid` int(6) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tsc_homework
@@ -150,15 +156,36 @@ CREATE TABLE `tsc_punch` (
   PRIMARY KEY (`id`),
   KEY `existed course` (`cid`),
   KEY `existed student` (`sid`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tsc_punch
 -- ----------------------------
 INSERT INTO `tsc_punch` VALUES ('1', '2', '1', '2017-05-14 16:35:51');
-INSERT INTO `tsc_punch` VALUES ('2', '2', '1', '2017-05-15 17:35:57');
+INSERT INTO `tsc_punch` VALUES ('2', '2', '2', '2017-05-15 17:35:57');
 INSERT INTO `tsc_punch` VALUES ('3', '2', '1', '2017-05-16 15:36:00');
 INSERT INTO `tsc_punch` VALUES ('4', '1', '1', '2017-05-16 17:36:03');
+INSERT INTO `tsc_punch` VALUES ('5', '1', '2', '2017-05-15 15:31:50');
+
+-- ----------------------------
+-- Table structure for tsc_score
+-- ----------------------------
+DROP TABLE IF EXISTS `tsc_score`;
+CREATE TABLE `tsc_score` (
+  `id` int(6) NOT NULL AUTO_INCREMENT,
+  `sid` int(6) NOT NULL,
+  `pid` int(6) NOT NULL,
+  `score` int(3) NOT NULL DEFAULT '0',
+  `datetime` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `unique score` (`sid`,`pid`) USING BTREE,
+  CONSTRAINT `existed student` FOREIGN KEY (`sid`) REFERENCES `tsc_student` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of tsc_score
+-- ----------------------------
+INSERT INTO `tsc_score` VALUES ('1', '1', '6', '1', '2017-05-22 22:45:35');
 
 -- ----------------------------
 -- Table structure for tsc_selected
@@ -171,13 +198,13 @@ CREATE TABLE `tsc_selected` (
   `datetime` datetime NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `unique selected` (`cid`,`sid`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of tsc_selected
 -- ----------------------------
 INSERT INTO `tsc_selected` VALUES ('1', '1', '1', '2017-05-15 14:20:35');
-INSERT INTO `tsc_selected` VALUES ('3', '1', '2', '2017-05-16 12:36:30');
+INSERT INTO `tsc_selected` VALUES ('2', '1', '2', '2017-05-21 20:18:17');
 
 -- ----------------------------
 -- Table structure for tsc_student
@@ -207,10 +234,11 @@ CREATE TABLE `tsc_teacher` (
   `password` varchar(32) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `unique name` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of tsc_teacher
 -- ----------------------------
 INSERT INTO `tsc_teacher` VALUES ('1', 'teacher', 'e10adc3949ba59abbe56e057f20f883e');
+INSERT INTO `tsc_teacher` VALUES ('2', '13800138000', 'e10adc3949ba59abbe56e057f20f883e');
 SET FOREIGN_KEY_CHECKS=1;
