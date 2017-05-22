@@ -79,7 +79,7 @@ class IndexAction extends Action {
         $this->ajaxReturn(null,"暂无相关内容!",0);
     }
     protected function getChapter($courseId,$id=0){
-        $ret = M("chapter")->where("cid=%d and pid=%d",$courseId,$id)->select();
+        $ret = M("chapter")->where("cid=%d and pid=%d",$courseId,$id)->order('rank desc,id')->select();
         $tmp = array();
         if(empty($ret))return NULL;
         foreach($ret as $i){
@@ -146,5 +146,15 @@ class IndexAction extends Action {
         'question'=>"$question",'updatetime'=>"$updatetime"));
         if($ret)$this->ajaxReturn((int)$ret,"提交成功!",1);
         $this->ajaxReturn(0,"提交失败,可能是课程id不存在,请确认后重试!",0);
+    }
+    public function postScore(){
+        $arr['sid'] = $this->login();
+        $arr['pid'] = (int)I('post.pid');
+        if(!$arr['pid'])$this->ajaxReturn(null,"章节ID不能为空!",0);
+        $arr['datetime'] = date('Y-m-d H:i:s');
+        $arr['score'] = (int)I('post.score');
+        $ret = M('score')->add($arr);
+        if($ret)$this->ajaxReturn($ret,"提交成功!",1);
+        $this->ajaxReturn(null,"提交失败,您已经答过了!",0);
     }
 }

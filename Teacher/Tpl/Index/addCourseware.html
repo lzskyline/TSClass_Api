@@ -1,0 +1,18 @@
+<form method="post" action="{:U('addCourseware')}">
+    <div class="form-group">
+        <label>课件ID: {$ret['id']?$ret['id']:"待添加"}</label>
+        <input type="hidden" class="form-control" id="id" name="id" value="{$ret.id}" required>
+    </div>
+    <div class="form-group">
+        <label>小节名称: {$stitle}</label>
+        <input type="hidden" class="form-control" id="pid" name="pid" value="{$ret.pid}" required>
+    </div>
+    <div class="form-group">
+        <label for="title">课件名称:</label>
+        <input type="text" class="form-control" id="title" name="title" placeholder="在此键入课件名称" value="{$ret.title}" required>
+    </div>
+    <div class="form-group">
+        <label for="url">课件地址:</label>
+        <input type="text" class="form-control" id="url" name="url" placeholder="在此键入课件链接" value="{$ret.url}" required>
+    </div>
+</form>

@@ -45,24 +45,31 @@
                 <ul class="nav nav-sidebar">
                     <li class="<?php echo ($m_courselist); ?>"><a href="<?php echo U('index');?>">课程管理</a></li>
                     <li class="<?php echo ($m_answered); ?>"><a href="<?php echo U('answered');?>">问答管理</a></li>
-                    <li class="<?php echo ($m_courseware); ?>"><a href="<?php echo U('courseware');?>">课件管理</a></li>
-                    <li class="<?php echo ($m_homework); ?>"><a href="<?php echo U('homework');?>">作业管理</a></li>
+                    <li class="<?php echo ($m_courseware); ?>"><a href="<?php echo U('courseware');?>">课件作业</a></li>
                 </ul>
             </div>
+<style>
+    #tree a{
+        text-decoration: none;
+    }
+</style>
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-    <h1 class="page-header pull-left">课件列表</h1>
+    <h1 class="page-header pull-left">章节列表</h1>
     <div class="dropdown pull-left" style="margin-top:2px; margin-left:20px;">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-            选择课程<span class="caret"></span>
+        <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown">
+            <span id="tips">选择课程</span><span class="caret"></span>
         </button>
         <ul class="dropdown-menu">
-            <?php if(is_array($courselist)): $i = 0; $__LIST__ = $courselist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$courselist): $mod = ($i % 2 );++$i;?><li><a href="#<?php echo ($courselist["id"]); ?>"><?php echo ($courselist["title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+            <?php if(is_array($courselist)): $i = 0; $__LIST__ = $courselist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$courselist): $mod = ($i % 2 );++$i;?><li><a href="javascript:switchCourse(<?php echo ($courselist["id"]); ?>,0,'<?php echo ($courselist["title"]); ?>');"><?php echo ($courselist["title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
         </ul>
     </div>
+    <button onclick="delChapter()" class="btn btn-danger pull-right" style="margin-top:2px; margin-left:20px;">删除章节</button>
+    <button onclick="addChapter()" class="btn btn-primary pull-right" style="margin-top:2px; margin-left:20px;">添加章节</button>
+    <button onclick="addHomework()" class="btn btn-success pull-right" style="margin-top:2px; margin-left:20px;">作业管理</button>
+    <button onclick="addCourseware()" class="btn btn-success pull-right" style="margin-top:2px; margin-left:20px;">添加课件</button>
     <div class="clearfix"></div>
 
-    <div id="tree"></div>
-
+    <div id="tree" class="col-md-12 well"><h3>请先选择课程.</h3></div>
     <div id="myModal" class="modal fade" role="dialog" style="margin-top: 10%;">
         <div class="modal-dialog">
             <!-- Modal content-->
@@ -89,55 +96,84 @@
 <script src="__PUBLIC__/js/bootstrap.min.js"></script>
 <script src="__PUBLIC__/js/bootstrap-treeview.js"></script>
 <script>
-    var tree = [
-  {
-    text: "Parent 1",
-    nodes: [
-      {
-        text: "Child 1",
-        nodes: [
-          {
-            text: "Grandchild 1"
-          },
-          {
-            text: "Grandchild 2"
-          }
-        ]
-      },
-      {
-        text: "Child 2"
-      }
-    ]
-  },
-  {
-    text: "Parent 2"
-  },
-  {
-    text: "Parent 3"
-  },
-  {
-    text: "Parent 4"
-  },
-  {
-    text: "Parent 5"
-  }
-];
-    $('#tree').treeview({
-      data: tree,
-      showTags: true,
-      levels: 1,
-      enableLinks: false
-    });
-    function replyQuestion(id) {
-        $("#modalTitle").text('查看问题');
-        $("#modalBody").load("<?php echo U('replyQuestion');?>?id=" + id, function () {
+    var scid = 0, sid = 0, stitle = "";
+    function switchCourse(cid, id, ctitle) {
+        scid = cid;
+        sid = id;
+        $("#tips").text(ctitle);
+        $.get("<?php echo U('coursewareList');?>", {
+            cid: cid,
+            pid: id
+        }, function (data) {
+            $('#tree').treeview({
+                data: data,
+                levels: 1,
+                enableLinks: true,
+                onNodeSelected: function(event, node){
+                    stitle = node.text;
+                    eval(node.href);
+                }
+            });
+        })
+    }
+    function addHomework(){
+        if(!(scid&&sid)){
+            alertMsg("请先选择课程及章节!");
+            return;
+        }
+        $("#modalTitle").text("添加作业");
+        $("#modalBody").load("<?php echo U('addHomework');?>?pid=" + sid + "&stitle=" + stitle, function () {
             $("#saveBtn").show();
             $("#myModal").modal("toggle");
         })
     }
+    function addCourseware(){
+        if(!(scid&&sid)){
+            alertMsg("请先选择课程及章节!");
+            return;
+        }
+        $("#modalTitle").text("添加课件");
+        $("#modalBody").load("<?php echo U('addCourseware');?>?pid=" + sid + "&stitle=" + stitle, function () {
+            $("#saveBtn").show();
+            $("#myModal").modal("toggle");
+        })
+    }
+    function addChapter(){
+        if(!(scid)){
+            alertMsg("请先选择课程!");
+            return;
+        }
+        $("#modalTitle").text("添加章节");
+        $("#modalBody").load("<?php echo U('addChapter');?>?cid=" + scid + "&pid=" + sid + "&ptitle=" + stitle, function () {
+            $("#saveBtn").show();
+            $("#myModal").modal("toggle");
+        })
+    }
+    function delChapter(){
+        if(!(scid&&sid)){
+            alertMsg("请先选择课程及章节!");
+            return;
+        }
+        $.get("<?php echo U('delChapter');?>",{cid:scid,id:sid},function(a){
+            alertMsg(a.info);
+            setTimeout(function(){
+                location.reload();
+            },2000);
+        })
+    }
+    function switchChapter(cid,id){
+        scid = cid;
+        sid = id;
+    }
     $("#saveBtn").click(function () {
         $("form").submit();
     })
+    function alertMsg(text=""){
+        $("#modalTitle").text("提示:");
+        $("#modalBody").text(text);
+        $("#saveBtn").hide();
+        $("#myModal").modal("toggle");
+    }
 </script>
 </body>
 

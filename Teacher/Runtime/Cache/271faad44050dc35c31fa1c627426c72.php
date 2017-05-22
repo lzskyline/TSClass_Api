@@ -6,7 +6,7 @@
                 <th width="14%">学生姓名</th>
                 <th width="30%">课程名称</th>
                 <th width="30%">选课时间</th>
-                <th width="20">管理操作</th>
+                <th width="20%">管理操作</th>
             </tr>
         </thead>
     </table>
@@ -19,8 +19,8 @@
                     <td width="14%"><?php echo ($vo["username"]); ?></td>
                     <td width="30%"><?php echo ($vo["title"]); ?></td>
                     <td width="30%"><?php echo ($vo["datetime"]); ?></td>
-                    <td width="20">
-                        <a href="<?php echo U('removeStudent');?>?sid=<?php echo ($vo["sid"]); ?>&cid=<?php echo ($vo["cid"]); ?>" class="btn btn-danger btn-sm">移除课程</a>
+                    <td width="20%">
+                        <a href="<?php echo U('removeStudent');?>?sid=<?php echo ($vo["sid"]); ?>&cid=<?php echo ($vo["cid"]); ?>" class="btn btn-danger btn-sm">移出课程</a>
                     </td>
                 </tr><?php endforeach; endif; else: echo "$empty" ;endif; ?>
         </tbody>

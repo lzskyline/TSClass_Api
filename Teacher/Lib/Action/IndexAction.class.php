@@ -15,24 +15,113 @@ class IndexAction extends Action {
     public function courseware(){
         $u = $this->isLogin();
         $tid = (int)I('session.id');
-        $this->title = '课件管理';
+        $this->title = '课件作业管理';
         $this->m_courseware = 'active';
         $this->courselist = M('course')->where('tid = %d',$tid)->select();
-        /*
-        $tmp[] = array(
-        "text"=>"$i[title]",
-        "tags"=>["添加小节"],
-        "href"=>"javascript:getChapter('$i[id]');",
-        "nodes"=>$this->getChapter($courseId,$i["id"])
-        );
-        */
         $this->display();
     }
-    public function homework(){
+    public function addHomework(){
         $u = $this->isLogin();
-        $this->title = '作业管理';
-        $this->m_homework = 'active';
+        $arr['pid'] = I('param.pid');
+        $arr['question'] = I('post.question');
+        if($arr['question']){
+            $arr['choices'] = I('post.choices');
+            $arr['answer'] = I('post.answer');
+            if((int)I('param.id'))
+                $ret = M('homework')->where('pid = %d',$arr['pid'])->save($arr);
+            else
+                $ret = M('homework')->add($arr);
+            $this->success("添加成功!");
+            exit;
+        }
+        $ret = M('homework')->where("pid = %d",$arr['pid'])->select();
+        $this->vo1 = $ret;
+        $this->empty1 = "<tr><td colspan=5 style='text-align:center'>暂无题目</td></tr>";
+        $ret = M('score')->where("pid = %d",$arr['pid'])
+        ->join('LEFT JOIN __STUDENT__ ON __STUDENT__.id = __SCORE__.sid')
+        ->order('score desc,datetime')->select();
+        $this->vo2 = $ret;
+        $this->empty2 = "<tr><td colspan=4 style='text-align:center'>暂无记录</td></tr>";
+        $this->pid = $arr['pid'];
+        $this->stitle = I('get.stitle');
         $this->display();
+    }
+    public function removeHomework(){
+        $u = $this->isLogin();
+        $pid = (int)I('get.pid');
+        $id = (int)I('get.id');
+        $ret = M('homework')
+        ->where('pid = %d and id = %d',$pid,$id)->find();
+        if(!$ret)$this->error("操作失败,在您的权限范围内找不到该作业!");
+        $ret = M('homework')->where('id = %d',$ret['id'])->delete();
+        if($ret)
+        $this->success("删除成功!");
+        else
+            $this->error("操作失败,请刷新重试!");
+    }
+    public function addCourseware(){
+        $u = $this->isLogin();
+        $arr['pid'] = I('param.pid');
+        $arr['title'] = I('post.title');
+        if($arr['title']){
+            $arr['url'] = I('post.url');
+            if((int)I('param.id'))
+            $ret = M('courseware')->where('pid = %d',$arr['pid'])->save($arr);
+            else
+                $ret = M('courseware')->add($arr);
+            $this->success("更新成功!");
+            exit;
+        }
+        $ret = M('courseware')->where("pid = %d",$arr['pid'])->find();
+        $ret['pid'] = $arr['pid'];
+        $this->ret = $ret;
+        $this->stitle = I('get.stitle');
+        $this->display();
+    }
+    public function delChapter(){
+        $u = $this->isLogin();
+        $id = I('get.id');
+        $cid = I('get.cid');
+        $ret = M('chapter')->where('id = %d and cid = %d',$id,$cid)->delete();
+        if(!$ret)$this->error("操作失败,请刷新重试!");
+        $this->success("删除成功!");
+    }
+    public function addChapter(){
+        $u = $this->isLogin();
+        $arr['cid'] = (int)I('param.cid');
+        $arr['pid'] = (int)I('param.pid');
+        $arr['title'] = I('post.title');
+        if($arr['title']){
+            $arr['rank'] = (int)I('post.rank');
+            $ret = M('chapter')->add($arr);
+            if(!$ret)$this->error("操作失败,请刷新重试!");
+            $this->success("添加成功!");
+            exit;
+        }
+        $this->pid = $arr['pid'];
+        $this->ptitle = I('get.ptitle');
+        $this->ret = M('course')->find($arr['cid']);
+        $this->display();
+    }
+    public function coursewareList(){
+        $u = $this->isLogin();
+        $cid = I('get.cid');
+        $pid = I('get.pid');
+        $tree = $this->getChapter($cid,$pid);
+        echo json_encode($tree);
+    }
+    protected function getChapter($courseId,$id=0){
+        $ret = M("chapter")->where("cid=%d and pid=%d",$courseId,$id)->order('rank desc,id')->select();
+        $tmp = array();
+        if(empty($ret))return NULL;
+        foreach($ret as $i){
+            $tmp[] = array(
+            "href" => "javascript:switchChapter($courseId,$i[id])",
+            "text" => "$i[title]",
+            "nodes" => $this->getChapter($courseId,$i["id"]),
+            );
+        }
+        return $tmp;
     }
     public function answered(){
         $u = $this->isLogin();

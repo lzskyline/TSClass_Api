@@ -14,6 +14,7 @@
 10.  <a href="#getPunchList">获取签到记录</a>
 11.  <a href="#punchCard">打卡签到</a>
 12.  <a href="#postQuestion">提交问题</a>
+12.  <a href="#postScore">提交成绩</a>
 
 ***
 
@@ -699,6 +700,54 @@
 > 地址：> [/student.php/Index/postQuestion]()
 > 
 > 参数： cid=1& question=问题问题
+
+
+``` javascript
+{
+  "data": 3,
+  "info": "提交成功!",
+  "status": 1
+}
+```
+
+**13.<span id="postScore">提交成绩</span>**
+
+###### 接口功能
+
+> 提交小节作业的成绩
+
+###### URL
+
+> [/student.php/Index/postScore]()
+
+###### 返回格式
+
+> JSON
+
+###### HTTP请求方式
+
+> POST
+
+###### 请求参数
+
+> 参数 | 必选 | 类型 | 说明
+> ---|----|----|---
+> pid | 是 | int | 指定小节id
+> score | 是 | int | 最终成绩
+
+###### 返回字段
+
+> 参数 | 类型 | 说明
+> ---|----|---
+> data | int | 问题id
+> info | string | 提示信息(unicode)
+> status | int | 状态代码,0:失败,1:成功
+
+###### 接口示例
+
+> 地址：> [/student.php/Index/postScore]()
+> 
+> 参数： pid=6& score=10
 
 
 ``` javascript

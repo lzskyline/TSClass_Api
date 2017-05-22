@@ -45,8 +45,7 @@
                 <ul class="nav nav-sidebar">
                     <li class="<?php echo ($m_courselist); ?>"><a href="<?php echo U('index');?>">课程管理</a></li>
                     <li class="<?php echo ($m_answered); ?>"><a href="<?php echo U('answered');?>">问答管理</a></li>
-                    <li class="<?php echo ($m_courseware); ?>"><a href="<?php echo U('courseware');?>">课件管理</a></li>
-                    <li class="<?php echo ($m_homework); ?>"><a href="<?php echo U('homework');?>">作业管理</a></li>
+                    <li class="<?php echo ($m_courseware); ?>"><a href="<?php echo U('courseware');?>">课件作业</a></li>
                 </ul>
             </div>
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
