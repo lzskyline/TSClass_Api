@@ -18,7 +18,7 @@
                 <volist name="vo" id="vo" empty="$empty">
                     <tr>
                         <td width="8%"><a href="javascript:shareId('{$vo.title}','{$vo.id}');" title="分享此课程">{$vo.id|sprintf="%06d",###}</a></td>
-                        <td width="10%"><img src="/images/{$vo.image}" alt="{$vo.image}" class="img-responsive"></td>
+                        <td width="10%"><img src="../../images/{$vo.image}" alt="{$vo.image}" class="img-responsive"></td>
                         <td width="20%">{$vo.title}</td>
                         <td width="30%">{$vo.description|mb_strimwidth=0,33,"..."}</td>
                         <td width="8%">{$vo['allowed']?'<span style="color:green;">是</span>':'<span style="color:red;">否</span>'}</td>
