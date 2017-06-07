@@ -2,6 +2,7 @@
     <div class="form-group">
         <label>课件ID: <?php echo ($ret['id']?$ret['id']:"待添加"); ?></label>
         <input type="hidden" class="form-control" id="id" name="id" value="<?php echo ($ret["id"]); ?>" required>
+        <input type="hidden" class="form-control" id="cid" name="cid" value="<?php echo ($cid); ?>" required>
     </div>
     <div class="form-group">
         <label>小节名称: <?php echo ($stitle); ?></label>

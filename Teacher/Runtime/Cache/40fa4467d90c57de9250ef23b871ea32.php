@@ -122,7 +122,7 @@
             return;
         }
         $("#modalTitle").text("添加作业");
-        $("#modalBody").load("<?php echo U('addHomework');?>?pid=" + sid + "&stitle=" + stitle, function () {
+        $("#modalBody").load("<?php echo U('addHomework');?>?pid=" + sid + "&stitle=" + stitle + "&cid=" + scid, function () {
             $("#saveBtn").show();
             $("#myModal").modal("toggle");
         })
@@ -133,7 +133,7 @@
             return;
         }
         $("#modalTitle").text("添加课件");
-        $("#modalBody").load("<?php echo U('addCourseware');?>?pid=" + sid + "&stitle=" + stitle, function () {
+        $("#modalBody").load("<?php echo U('addCourseware');?>?pid=" + sid + "&stitle=" + stitle + "&cid=" + scid, function () {
             $("#saveBtn").show();
             $("#myModal").modal("toggle");
         })

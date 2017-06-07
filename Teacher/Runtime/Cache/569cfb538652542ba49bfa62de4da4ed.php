@@ -66,7 +66,7 @@
             <tbody>
                 <?php if(is_array($vo)): $i = 0; $__LIST__ = $vo;if( count($__LIST__)==0 ) : echo "$empty" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
                         <td width="8%"><a href="javascript:shareId('<?php echo ($vo["title"]); ?>','<?php echo ($vo["id"]); ?>');" title="分享此课程"><?php echo (sprintf("%06d",$vo["id"])); ?></a></td>
-                        <td width="10%"><img src="/images/<?php echo ($vo["image"]); ?>" alt="<?php echo ($vo["image"]); ?>" class="img-responsive"></td>
+                        <td width="10%"><img src="../../images/<?php echo ($vo["image"]); ?>" alt="<?php echo ($vo["image"]); ?>" class="img-responsive"></td>
                         <td width="20%"><?php echo ($vo["title"]); ?></td>
                         <td width="30%"><?php echo (mb_strimwidth($vo["description"],0,33,"...")); ?></td>
                         <td width="8%"><?php echo ($vo['allowed']?'<span style="color:green;">是</span>':'<span style="color:red;">否</span>'); ?></td>

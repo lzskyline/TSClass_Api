@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 100121
 File Encoding         : 65001
 
-Date: 2017-05-22 22:58:52
+Date: 2017-06-07 19:07:58
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -68,6 +68,7 @@ INSERT INTO `tsc_chapter` VALUES ('7', '1', '入门1小节', '3', '0');
 INSERT INTO `tsc_chapter` VALUES ('8', '1', '入门2小节', '3', '0');
 INSERT INTO `tsc_chapter` VALUES ('9', '2', '测测测', '0', '0');
 INSERT INTO `tsc_chapter` VALUES ('15', '1', '1313', '14', '0');
+INSERT INTO `tsc_chapter` VALUES ('17', '2', '444', '9', '0');
 
 -- ----------------------------
 -- Table structure for tsc_course
@@ -100,13 +101,13 @@ CREATE TABLE `tsc_courseware` (
   `url` varchar(255) NOT NULL,
   `pid` int(6) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tsc_courseware
 -- ----------------------------
 INSERT INTO `tsc_courseware` VALUES ('1', '序章课件', 'http://baidu.com/', '6');
-INSERT INTO `tsc_courseware` VALUES ('3', '百度', 'http://baidu.com/', '7');
+INSERT INTO `tsc_courseware` VALUES ('2', '百度', 'http://baidu.com/', '7');
 
 -- ----------------------------
 -- Table structure for tsc_homework
@@ -119,7 +120,7 @@ CREATE TABLE `tsc_homework` (
   `answer` smallint(1) NOT NULL DEFAULT '0',
   `pid` int(6) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tsc_homework
@@ -136,13 +137,17 @@ CREATE TABLE `tsc_notice` (
   `content` varchar(50) NOT NULL,
   `sid` int(6) NOT NULL DEFAULT '0',
   `datetime` datetime NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `unique notice` (`cid`,`content`,`sid`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tsc_notice
 -- ----------------------------
 INSERT INTO `tsc_notice` VALUES ('1', '1', '全部同学 通知通知!', '0', '2017-05-15 15:22:58');
+INSERT INTO `tsc_notice` VALUES ('2', '2', '开始签到', '0', '2017-05-24 07:57:24');
+INSERT INTO `tsc_notice` VALUES ('3', '1', '老师发布了新的作业', '0', '2017-05-24 08:03:48');
+INSERT INTO `tsc_notice` VALUES ('4', '1', '老师发布了新的课件', '0', '2017-05-24 08:04:09');
 
 -- ----------------------------
 -- Table structure for tsc_punch

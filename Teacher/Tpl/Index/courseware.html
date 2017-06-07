@@ -49,11 +49,14 @@
 <script src="__PUBLIC__/js/bootstrap.min.js"></script>
 <script src="__PUBLIC__/js/bootstrap-treeview.js"></script>
 <script>
-    var scid = 0, sid = 0, stitle = "";
+    var scid = sessionStorage.getItem('scid'), sid = 0, stitle = sessionStorage.getItem('stitle');
+    if(scid)switchCourse(scid, 0, stitle)
     function switchCourse(cid, id, ctitle) {
         scid = cid;
         sid = id;
         $("#tips").text(ctitle);
+        sessionStorage.setItem('scid',cid);
+        sessionStorage.setItem('stitle',ctitle);
         $.get("{:U('coursewareList')}", {
             cid: cid,
             pid: id
@@ -75,7 +78,7 @@
             return;
         }
         $("#modalTitle").text("添加作业");
-        $("#modalBody").load("{:U('addHomework')}?pid=" + sid + "&stitle=" + stitle, function () {
+        $("#modalBody").load("{:U('addHomework')}?pid=" + sid + "&stitle=" + stitle + "&cid=" + scid, function () {
             $("#saveBtn").show();
             $("#myModal").modal("toggle");
         })
@@ -86,7 +89,7 @@
             return;
         }
         $("#modalTitle").text("添加课件");
-        $("#modalBody").load("{:U('addCourseware')}?pid=" + sid + "&stitle=" + stitle, function () {
+        $("#modalBody").load("{:U('addCourseware')}?pid=" + sid + "&stitle=" + stitle + "&cid=" + scid, function () {
             $("#saveBtn").show();
             $("#myModal").modal("toggle");
         })
@@ -107,6 +110,8 @@
             alertMsg("请先选择课程及章节!");
             return;
         }
+        var ensure = confirm("是否要删除'" + stitle +"'?");
+        if(!ensure)return;
         $.get("{:U('delChapter')}",{cid:scid,id:sid},function(a){
             alertMsg(a.info);
             setTimeout(function(){

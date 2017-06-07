@@ -10,6 +10,7 @@
             <div class="form-group">
                 <label>小节名称: <?php echo ($stitle); ?></label>
                 <input type="hidden" class="form-control" id="pid" name="pid" value="<?php echo ($pid); ?>" required>
+                <input type="hidden" class="form-control" id="cid" name="cid" value="<?php echo ($cid); ?>" required>
             </div>
             <div class="form-group">
                 <label for="question">作业问题:</label>
@@ -74,9 +75,9 @@
                 <tbody>
                     <?php if(is_array($vo2)): $i = 0; $__LIST__ = $vo2;if( count($__LIST__)==0 ) : echo "$empty2" ;else: foreach($__LIST__ as $key=>$vo2): $mod = ($i % 2 );++$i;?><tr>
                             <td width="6%"><?php echo ($vo2["id"]); ?></td>
-                            <td width="40%" style="text-align: left;"><?php echo ($vo2["username"]); ?></td>
-                            <td width="14%"><?php echo ($vo2["score"]); ?></td>
-                            <td width="40%"><?php echo ($vo2["datetime"]); ?></td>
+                            <td width="40%"><?php echo ($vo2["username"]); ?></td>
+                            <td width="14%"><?php echo ($vo2["datetime"]); ?></td>
+                            <td width="40%"><?php echo ($vo2["score"]); ?></td>
                         </tr><?php endforeach; endif; else: echo "$empty2" ;endif; ?>
                 </tbody>
             </table>

@@ -24,13 +24,16 @@ class IndexAction extends Action {
         $u = $this->isLogin();
         $arr['pid'] = I('param.pid');
         $arr['question'] = I('post.question');
+        $cid = I('param.cid');
         if($arr['question']){
             $arr['choices'] = I('post.choices');
             $arr['answer'] = I('post.answer');
             if((int)I('param.id'))
                 $ret = M('homework')->where('pid = %d',$arr['pid'])->save($arr);
-            else
+            else{
                 $ret = M('homework')->add($arr);
+                $this->postNotify('老师发布了新的作业',I('param.cid'),0);
+            }
             $this->success("添加成功!");
             exit;
         }
@@ -43,6 +46,7 @@ class IndexAction extends Action {
         $this->vo2 = $ret;
         $this->empty2 = "<tr><td colspan=4 style='text-align:center'>暂无记录</td></tr>";
         $this->pid = $arr['pid'];
+        $this->cid = $cid;
         $this->stitle = I('get.stitle');
         $this->display();
     }
@@ -55,7 +59,7 @@ class IndexAction extends Action {
         if(!$ret)$this->error("操作失败,在您的权限范围内找不到该作业!");
         $ret = M('homework')->where('id = %d',$ret['id'])->delete();
         if($ret)
-        $this->success("删除成功!");
+            $this->success("删除成功!");
         else
             $this->error("操作失败,请刷新重试!");
     }
@@ -63,18 +67,22 @@ class IndexAction extends Action {
         $u = $this->isLogin();
         $arr['pid'] = I('param.pid');
         $arr['title'] = I('post.title');
+        $cid = I('param.cid');
         if($arr['title']){
             $arr['url'] = I('post.url');
             if((int)I('param.id'))
-            $ret = M('courseware')->where('pid = %d',$arr['pid'])->save($arr);
-            else
+                $ret = M('courseware')->where('pid = %d',$arr['pid'])->save($arr);
+            else{
                 $ret = M('courseware')->add($arr);
-            $this->success("更新成功!");
+                $this->postNotify('老师发布了新的课件',$cid,0);
+            }
+            $this->success("操作成功!");
             exit;
         }
         $ret = M('courseware')->where("pid = %d",$arr['pid'])->find();
         $ret['pid'] = $arr['pid'];
         $this->ret = $ret;
+        $this->cid = $cid;
         $this->stitle = I('get.stitle');
         $this->display();
     }
@@ -144,13 +152,14 @@ class IndexAction extends Action {
         if($id){
             $arr['answer'] = I('post.answer');
             $arr['updatetime'] = date('Y-m-d H:i:s');
-            $ret = M('answered')
+            $res = M('answered')
             ->join('LEFT JOIN __COURSE__ ON __COURSE__.id = __ANSWERED__.cid')
             ->join('LEFT JOIN __STUDENT__ ON __STUDENT__.id = __ANSWERED__.sid')
             ->where('tid = %d and tsc_answered.id = %d and answer = ""',$tid,$id)->field('*,tsc_answered.id as id')->find();
-            if(!$ret)$this->error("操作失败,在您的权限范围内找不到该问题!");
-            $ret = M('answered')->where('id = %d',$ret['id'])->save($arr);
+            if(!$res)$this->error("操作失败,在您的权限范围内找不到该问题!");
+            $ret = M('answered')->where('id = %d',$res['id'])->save($arr);
             if(!$ret)$this->error("操作失败,请刷新重试!");
+            $this->postNotify('老师回复了您的问题',$res['cid'],$res['sid']);
             $this->success("回复成功!");
             exit;
         }
@@ -169,13 +178,14 @@ class IndexAction extends Action {
         $id = (int)I('get.id');
         if(!$id)$this->error('问题id不存在!');
         $tid = (int)I('session.id');
-        $ret = M('answered')
+        $res = M('answered')
         ->join('LEFT JOIN __COURSE__ ON __COURSE__.id = __ANSWERED__.cid')
         ->join('LEFT JOIN __STUDENT__ ON __STUDENT__.id = __ANSWERED__.sid')
         ->where('tid = %d and tsc_answered.id = %d and answer = ""',$tid,$id)->field('*,tsc_answered.id as id')->find();
-        if(!$ret)$this->error("操作失败,在您的权限范围内找不到该问题!");
-        $ret = M('answered')->where('id = %d',$ret['id'])->delete();
+        if(!$res)$this->error("操作失败,在您的权限范围内找不到该问题!");
+        $ret = M('answered')->where('id = %d',$res['id'])->delete();
         if(!$ret)$this->error("操作失败,请刷新重试!");
+        $this->postNotify('您的问题已被老师删除',$res['cid'],$res['sid']);
         $this->success("删除成功!");
         exit;
     }
@@ -214,10 +224,10 @@ class IndexAction extends Action {
         ->where('cid = %d and tid = %d and sid = %d',$cid,$tid,$sid)->field('tsc_selected.*')->find();
         if(!$ret)$this->error("操作失败,在您的权限范围内找不到该学生!");
         $ret = M('selected')->where('id = %d',$ret['id'])->delete();
-        if($ret)
+        if(!$ret)$this->error("操作失败,请刷新重试!");
+        $this->postNotify('您已被老师移出课程',$cid,$sid);
         $this->success("移除成功!");
-        else
-            $this->error("操作失败,请刷新重试!");
+            
     }
     public function editCourse(){
         $u = $this->isLogin();
@@ -278,8 +288,16 @@ class IndexAction extends Action {
         $id = (int)I('get.id');
         if(!$id)$this->error('课程id传入错误!');
         $allowed = (int)I('get.allowed');
+        if($allowed==0)$this->postNotify('开始签到',$id,0);
         $ret = M('course')->where('id=%d and tid=%d',$id,$tid)->setField('allowed',(int)!$allowed);
         $this->success('签到状态更新成功!');
+    }
+    public function postNotify($content,$cid,$sid=0){
+        $arr['content'] = $content;
+        $arr['cid'] = (int)$cid;
+        $arr['sid'] = (int)$sid;
+        $arr['datetime'] = date('Y-m-d H:i:s');
+        $tmp = M('notice')->add($arr);
     }
     public function login(){
         $u = I('post.username');

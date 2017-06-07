@@ -2,23 +2,23 @@
 
 ## 目录
 
-1.  <a href="#login">登入</a>
-2.  <a href="#register">注册</a>
-3.  <a href="#addCourse">添加课程</a>
-4.  <a href="#getCourseList">获取课程列表</a>
-5.  <a href="#getAnsweredList">获取问答列表</a>
-6.  <a href="#getNoticeList">获取消息列表</a>
-7.  <a href="#getChapterList">获取章节列表</a>
-8.  <a href="#getCourseware">获取小节课件</a>
-9.  <a href="#getHomework">获取小节作业</a>
-10.  <a href="#getPunchList">获取签到记录</a>
-11.  <a href="#punchCard">打卡签到</a>
-12.  <a href="#postQuestion">提交问题</a>
-12.  <a href="#postScore">提交成绩</a>
+1.  <a href="#user-content-login">登入</a>
+2.  <a href="#user-content-register">注册</a>
+3.  <a href="#user-content-addCourse">添加课程</a>
+4.  <a href="#user-content-getCourseList">获取课程列表</a>
+5.  <a href="#user-content-getAnsweredList">获取问答列表</a>
+6.  <a href="#user-content-getNoticeList">获取消息列表</a>
+7.  <a href="#user-content-getChapterList">获取章节列表</a>
+8.  <a href="#user-content-getCourseware">获取小节课件</a>
+9.  <a href="#user-content-getHomework">获取小节作业</a>
+10.  <a href="#user-content-getPunchList">获取签到记录</a>
+11.  <a href="#user-content-punchCard">打卡签到</a>
+12.  <a href="#user-content-postQuestion">提交问题</a>
+12.  <a href="#user-content-postScore">提交成绩</a>
 
 ***
 
-**1.<span id="login">登入</span>**
+**1.<a id="login">登入</a>**
 
 ###### 接口功能
 
@@ -62,7 +62,7 @@
 {"data":1,"info":"登陆成功!","status":1}
 ```
 
-**2.<span id="register">注册</span>**
+**2.<a id ="user-content-register">注册</a>**
 
 ###### 接口功能
 
@@ -106,7 +106,7 @@
 {"data":2,"info":"注册成功!","status":1}
 ```
 
-**3.<span id="addCourse">添加课程</span>**
+**3.<a id ="user-content-addCourse">添加课程</a>**
 
 ###### 接口功能
 
@@ -149,7 +149,7 @@
 {"data":1,"info":"添加课程成功!","status":1}
 ```
 
-**4.<span id="getCourseList">获取课程列表</span>**
+**4.<a id ="user-content-getCourseList">获取课程列表</a>**
 
 ###### 接口功能
 
@@ -207,7 +207,7 @@
 }
 ```
 
-**5.<span id="getAnsweredList">获取问答列表</span>**
+**5.<a id ="user-content-getAnsweredList">获取问答列表</a>**
 
 ###### 接口功能
 
@@ -283,7 +283,7 @@
 }
 ```
 
-**6.<span id="getNoticeList">获取消息列表</span>**
+**6.<a id ="user-content-getNoticeList">获取消息列表</a>**
 
 ###### 接口功能
 
@@ -343,7 +343,7 @@
 }
 ```
 
-**7.<span id="getChapterList">获取章节列表</span>**
+**7.<a id ="user-content-getChapterList">获取章节列表</a>**
 
 ###### 接口功能
 
@@ -427,7 +427,7 @@
 }
 ```
 
-**8.<span id="getCourseware">获取小节课件</span>**
+**8.<a id ="user-content-getCourseware">获取小节课件</a>**
 
 ###### 接口功能
 
@@ -485,7 +485,7 @@
 }
 ```
 
-**9.<span id="getHomework">获取小节作业</span>**
+**9.<a id ="user-content-getHomework">获取小节作业</a>**
 
 ###### 接口功能
 
@@ -545,7 +545,7 @@
 }
 ```
 
-**10.<span id="getPunchList">获取签到记录</span>**
+**10.<a id ="user-content-getPunchList">获取签到记录</a>**
 
 ###### 接口功能
 
@@ -615,7 +615,7 @@
 }
 ```
 
-**11.<span id="punchCard">打卡签到</span>**
+**11.<a id ="user-content-punchCard">打卡签到</a>**
 
 ###### 接口功能
 
@@ -662,7 +662,7 @@
 }
 ```
 
-**12.<span id="postQuestion">提交问题</span>**
+**12.<a id ="user-content-postQuestion">提交问题</a>**
 
 ###### 接口功能
 
@@ -710,7 +710,7 @@
 }
 ```
 
-**13.<span id="postScore">提交成绩</span>**
+**13.<a id ="user-content-postScore">提交成绩</a>**
 
 ###### 接口功能
 
